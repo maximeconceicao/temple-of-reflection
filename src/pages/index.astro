@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+// Component Imports
+import Layout from "@/layouts/Layout.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/basics/astro-components/
+---
+
+<script is:inline>
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+  const isDark = getThemePreference() === "dark";
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+  if (typeof localStorage !== "undefined") {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+</script>
+
+<Layout title={"test"}>
+  <div class="space-y-6">
+    <section class="space-y-4 text-center p-5">
+      <h2 class="text-lg text-gray-600">👋</h2>
+      <p>
+        Salut ! Moi c'est Max et ce petit blog parle de <span
+          class="text-blue-400">guitare</span
+        >.
+      </p>
+    </section>
+  </div>
+</Layout>

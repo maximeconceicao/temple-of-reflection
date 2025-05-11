@@ -1,0 +1,25 @@
+---
+import "../styles/global.css";
+import Sidebar from "@/components/Sidebar";
+import BottomNav from "@/components/BottomNav";
+import { CommandDialogProvider } from "@/components/CommandDialogContext";
+import { SearchCommandDialog } from "@/components/SearchCommandDialog";
+import AppShell from "@/components/AppShell";
+const { title } = Astro.props;
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="flex min-h-screen">
+      <AppShell client:load>
+        <slot />
+      </AppShell>
+    </main>
+  </body>
+</html>
