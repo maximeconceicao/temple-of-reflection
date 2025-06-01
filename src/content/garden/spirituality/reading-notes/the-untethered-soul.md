@@ -1,6 +1,6 @@
 ---
 title: "L'âme délivrée"
-theme: "spirituality"
+category: "spirituality"
 type: "reading-notes"
 categories:
   - nature

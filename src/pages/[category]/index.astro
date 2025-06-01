@@ -9,29 +9,29 @@ export async function getStaticPaths() {
 
   console.log(
     "allEntries",
-    allEntries.map((e) => e.data.theme)
+    allEntries.map((e) => e.data.category)
   );
 
   // En extrait tous les `theme` uniques
-  const uniqueThemes = Array.from(
-    new Set(allEntries.map((entry) => entry.data.theme).filter(Boolean))
+  const uniqueCategories = Array.from(
+    new Set(allEntries.map((entry) => entry.data.category).filter(Boolean))
   );
 
   // Génère les routes dynamiques pour chaque `theme`
-  return uniqueThemes.map((theme) => ({
-    params: { theme },
+  return uniqueCategories.map((category) => ({
+    params: { category },
   }));
 }
 
 export async function get({ params }: APIContext) {
-  const theme = params.theme;
+  const category = params.category;
 
-  if (!theme) return new Response("Thème manquant", { status: 404 });
+  if (!category) return new Response("Thème manquant", { status: 404 });
 
   const allEntries = await getCollection("garden");
 
   const filteredEntries = allEntries.filter(
-    (entry) => entry.data.theme === theme
+    (entry) => entry.data.category === category
   );
 
   const groupedByType = filteredEntries.reduce<
@@ -45,21 +45,20 @@ export async function get({ params }: APIContext) {
 
   return {
     props: {
-      theme,
+      category,
       groupedByType,
     },
   };
 }
 
-const { theme, groupedByType } = Astro.props;
-console.log("theme", theme, groupedByType);
+const { category, groupedByType } = Astro.props;
 ---
 
 <Layout title={"test"}>
   <div class="space-y-6">
     <section class="space-y-4 text-center p-5">
       <h1 class="text-3xl font-bold mb-6 capitalize">
-        Thème : {JSON.stringify(theme)}
+        Thème : {JSON.stringify(category)}
       </h1>
     </section>
   </div>

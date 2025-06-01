@@ -1,13 +1,13 @@
-export enum GardenTheme {
+export enum GardenCategory {
   SPIRITUALITY = "spirituality",
   SOCIETY = "society",
   MUSIC = "music",
   TECH = "tech",
 }
 
-export const gardenThemeLabelMap = {
-  [GardenTheme.SPIRITUALITY]: "Spiritualité",
-  [GardenTheme.MUSIC]: "Musique",
-  [GardenTheme.SOCIETY]: "Société",
-  [GardenTheme.TECH]: "Tech",
+export const gardenCategoryLabelMap = {
+  [GardenCategory.SPIRITUALITY]: "Spiritualité",
+  [GardenCategory.MUSIC]: "Musique",
+  [GardenCategory.SOCIETY]: "Société",
+  [GardenCategory.TECH]: "Tech",
 };

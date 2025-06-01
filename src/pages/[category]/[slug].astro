@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 
   return allEntries.map((entry) => ({
     params: {
-      theme: entry.data.theme,
+      category: entry.data.category,
       slug: entry.slug,
     },
   }));
@@ -18,7 +18,8 @@ export async function get({ params }: APIContext) {
   const allEntries = await getCollection("garden");
 
   const matchedEntry = allEntries.find(
-    (entry) => entry.data.theme === params.theme && entry.slug === params.slug
+    (entry) =>
+      entry.data.category === params.category && entry.slug === params.slug
   );
 
   if (!matchedEntry) {
@@ -37,6 +38,6 @@ const { entry } = Astro.props;
 
 <article class="prose lg:prose-xl mx-auto">
   <h1>{entry.data.title}</h1>
-  <p class="text-sm text-gray-500">{entry.data.type} — {entry.data.theme}</p>
+  <p class="text-sm text-gray-500">{entry.data.type} — {entry.data.category}</p>
   <Markdown content={entry.body} />
 </article>

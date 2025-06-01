@@ -6,7 +6,7 @@ const gardenCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    theme: z.enum(["society", "spirituality", "music", "tech"]), // adapte cette liste
+    category: z.enum(["society", "spirituality", "music", "tech"]), // adapte cette liste
     emoji: z.string().optional(),
     type: z.string(),
     // Transform string to Date object

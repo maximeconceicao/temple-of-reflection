@@ -1,29 +1,8 @@
-import {
-  Github,
-  PersonStanding,
-  Guitar,
-  Binary,
-  Shell,
-  Sprout,
-} from "lucide-react";
-import { Button } from "./ui/button";
+import { Github, Sprout } from "lucide-react";
+import { CategoryList } from "./CategoryList";
 import { ModeToggle } from "./ModeToggle";
 import { SearchBar } from "./SearchBar";
-import { GardenTheme, gardenThemeLabelMap } from "@/constants";
-
-const iconMap = {
-  [GardenTheme.SPIRITUALITY]: Shell,
-  [GardenTheme.MUSIC]: Guitar,
-  [GardenTheme.SOCIETY]: PersonStanding,
-  [GardenTheme.TECH]: Binary,
-};
-
-const colorMap = {
-  [GardenTheme.SPIRITUALITY]: "chart-1",
-  [GardenTheme.MUSIC]: "chart-5",
-  [GardenTheme.SOCIETY]: "chart-3",
-  [GardenTheme.TECH]: "chart-2",
-};
+import { Button } from "./ui/button";
 
 export function Sidebar({ categories }) {
   return (
@@ -38,29 +17,7 @@ export function Sidebar({ categories }) {
 
       <div>
         <h3 className="mb-3 text-2xs font-semibold">Catégories</h3>
-        <ul>
-          {categories.map(({ theme, count }) => {
-            const Icon = iconMap[theme] || Sprout;
-            const color = colorMap[theme] || "chart-0";
-            const label = gardenThemeLabelMap[theme] || theme;
-
-            return (
-              <li key={theme}>
-                <a
-                  href={`/${theme}`}
-                  className="center inline-flex items-center gap-2 py-1 text-sm"
-                >
-                  <Icon
-                    className="w-4 h-4"
-                    style={{ stroke: `var(--${color})` }}
-                  />
-                  <span>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
-                  <span className="text-xs text-black-600">({count})</span>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <CategoryList categories={categories} />
       </div>
 
       <div className="flex flex-row justify-between">
@@ -72,5 +29,3 @@ export function Sidebar({ categories }) {
     </div>
   );
 }
-
-export default Sidebar;
