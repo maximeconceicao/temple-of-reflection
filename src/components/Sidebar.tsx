@@ -9,43 +9,23 @@ import {
 import { Button } from "./ui/button";
 import { ModeToggle } from "./ModeToggle";
 import { SearchBar } from "./SearchBar";
-import { GardenCategory } from "@/constants";
+import { GardenTheme, gardenThemeLabelMap } from "@/constants";
 
-const categoriesWithCounts = [
-  {
-    category: GardenCategory.SPIRITUALITY,
-    label: "Spiritualité",
-    count: 3,
-    color: "chart-1",
-    icon: Shell,
-  },
-  {
-    category: GardenCategory.MUSIC,
-    label: "Musique",
-    count: 1,
-    color: "chart-5",
-    icon: Guitar,
-  },
-  {
-    category: GardenCategory.SOCIETY,
-    label: "Société",
-    count: 3,
-    color: "chart-3",
-    icon: PersonStanding,
-  },
-  {
-    category: GardenCategory.TECH,
-    label: "Tech",
-    count: 4,
-    color: "chart-2",
-    icon: Binary,
-  },
-];
+const iconMap = {
+  [GardenTheme.SPIRITUALITY]: Shell,
+  [GardenTheme.MUSIC]: Guitar,
+  [GardenTheme.SOCIETY]: PersonStanding,
+  [GardenTheme.TECH]: Binary,
+};
 
-// Sort the array based on entryCounts
-categoriesWithCounts.sort((a, b) => b.count - a.count);
+const colorMap = {
+  [GardenTheme.SPIRITUALITY]: "chart-1",
+  [GardenTheme.MUSIC]: "chart-5",
+  [GardenTheme.SOCIETY]: "chart-3",
+  [GardenTheme.TECH]: "chart-2",
+};
 
-export function Sidebar() {
+export function Sidebar({ categories }) {
   return (
     <div className="flex h-full flex-col justify-between gap-8 border-r border-neutral-200 pt-24 pb-8 px-8">
       <div>
@@ -59,20 +39,27 @@ export function Sidebar() {
       <div>
         <h3 className="mb-3 text-2xs font-semibold">Catégories</h3>
         <ul>
-          {categoriesWithCounts.map(
-            ({ category, label, count, color, icon: Icon }) => (
-              <li key={category}>
+          {categories.map(({ theme, count }) => {
+            const Icon = iconMap[theme] || Sprout;
+            const color = colorMap[theme] || "chart-0";
+            const label = gardenThemeLabelMap[theme] || theme;
+
+            return (
+              <li key={theme}>
                 <a
-                  href={`/garden/${category}`}
+                  href={`/${theme}`}
                   className="center inline-flex items-center gap-2 py-1 text-sm"
                 >
-                  <Icon className="w-4 h-4" style={{ stroke: `var(--${color})` }} />
+                  <Icon
+                    className="w-4 h-4"
+                    style={{ stroke: `var(--${color})` }}
+                  />
                   <span>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
                   <span className="text-xs text-black-600">({count})</span>
                 </a>
               </li>
-            )
-          )}
+            );
+          })}
         </ul>
       </div>
 
@@ -85,3 +72,5 @@ export function Sidebar() {
     </div>
   );
 }
+
+export default Sidebar;

@@ -1,0 +1,66 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import type { APIContext } from "astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  // Récupère tous les contenus d'une collection générique
+  const allEntries = await getCollection("garden");
+
+  console.log(
+    "allEntries",
+    allEntries.map((e) => e.data.theme)
+  );
+
+  // En extrait tous les `theme` uniques
+  const uniqueThemes = Array.from(
+    new Set(allEntries.map((entry) => entry.data.theme).filter(Boolean))
+  );
+
+  // Génère les routes dynamiques pour chaque `theme`
+  return uniqueThemes.map((theme) => ({
+    params: { theme },
+  }));
+}
+
+export async function get({ params }: APIContext) {
+  const theme = params.theme;
+
+  if (!theme) return new Response("Thème manquant", { status: 404 });
+
+  const allEntries = await getCollection("garden");
+
+  const filteredEntries = allEntries.filter(
+    (entry) => entry.data.theme === theme
+  );
+
+  const groupedByType = filteredEntries.reduce<
+    Record<string, typeof filteredEntries>
+  >((acc, entry) => {
+    const type = entry.data.type;
+    if (!acc[type]) acc[type] = [];
+    acc[type].push(entry);
+    return acc;
+  }, {});
+
+  return {
+    props: {
+      theme,
+      groupedByType,
+    },
+  };
+}
+
+const { theme, groupedByType } = Astro.props;
+console.log("theme", theme, groupedByType);
+---
+
+<Layout title={"test"}>
+  <div class="space-y-6">
+    <section class="space-y-4 text-center p-5">
+      <h1 class="text-3xl font-bold mb-6 capitalize">
+        Thème : {JSON.stringify(theme)}
+      </h1>
+    </section>
+  </div>
+</Layout>

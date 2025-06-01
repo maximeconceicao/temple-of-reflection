@@ -5,11 +5,22 @@ import BottomNav from "./BottomNav";
 import { SearchCommandDialog } from "./SearchCommandDialog";
 import { Sidebar } from "./Sidebar";
 
-export default function AppShell({ children }: { children: React.ReactNode }) {
+type Category = {
+  theme: string;
+  count: number;
+};
+
+export default function AppShell({
+  children,
+  categories,
+}: {
+  children: React.ReactNode;
+  categories: Category[];
+}) {
   return (
     <CommandDialogProvider>
       <div className="hidden lg:block lg:sticky lg:top-0 lg:h-screen">
-        <Sidebar />
+        <Sidebar categories={categories} />
       </div>
       <div className="flex-1 pt-24">{children}</div>
       <div className="lg:hidden h-20">
