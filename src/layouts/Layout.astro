@@ -1,12 +1,15 @@
 ---
 import AppShell from "@/components/AppShell";
-import { GardenCategory } from "@/constants";
+import { allCategories, GardenCategory } from "@/lib/categories";
 import { getCollection } from "astro:content";
 import "../styles/global.css";
 const { title } = Astro.props;
 
-const allEntries = await getCollection("garden");
+const allEntriesArrays = await Promise.all(
+  allCategories.map((category) => getCollection(category))
+);
 
+const allEntries = allEntriesArrays.flat();
 const categories = Object.values(GardenCategory).map((category) => ({
   category,
   count: allEntries.filter((entry) => entry.data.category === category).length,

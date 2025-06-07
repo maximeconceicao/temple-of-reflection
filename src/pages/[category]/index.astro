@@ -1,65 +1,53 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import type { APIContext } from "astro";
 import { getCollection } from "astro:content";
+import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
 
 export async function getStaticPaths() {
-  // Récupère tous les contenus d'une collection générique
-  const allEntries = await getCollection("garden");
-
-  console.log(
-    "allEntries",
-    allEntries.map((e) => e.data.category)
-  );
-
-  // En extrait tous les `theme` uniques
-  const uniqueCategories = Array.from(
-    new Set(allEntries.map((entry) => entry.data.category).filter(Boolean))
-  );
-
-  // Génère les routes dynamiques pour chaque `theme`
-  return uniqueCategories.map((category) => ({
+  return allCategories.map((category) => ({
     params: { category },
   }));
 }
 
-export async function get({ params }: APIContext) {
-  const category = params.category;
+const category = Astro.params.category as GardenCategory;
 
-  if (!category) return new Response("Thème manquant", { status: 404 });
-
-  const allEntries = await getCollection("garden");
-
-  const filteredEntries = allEntries.filter(
-    (entry) => entry.data.category === category
-  );
-
-  const groupedByType = filteredEntries.reduce<
-    Record<string, typeof filteredEntries>
-  >((acc, entry) => {
-    const type = entry.data.type;
-    if (!acc[type]) acc[type] = [];
-    acc[type].push(entry);
-    return acc;
-  }, {});
-
-  return {
-    props: {
-      category,
-      groupedByType,
-    },
-  };
+if (!allCategories.includes(category)) {
+  throw new Error("Catégorie inconnue");
 }
 
-const { category, groupedByType } = Astro.props;
+const entries = await getCollection(category);
+
+// const groupedByType = entries.reduce(
+//   (acc: Record<string, typeof entries>, entry) => {
+//     const type = entry.data.type;
+//     if (!acc[type]) acc[type] = [];
+//     acc[type].push(entry);
+//     return acc;
+//   },
+//   {}
+// );
+
+const entriesSorted = entries.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate);
+  const dateB = new Date(b.data.pubDate);
+  return dateB.getTime() - dateA.getTime();
+});
+
+const Icon = categoryMeta[category].icon;
 ---
 
-<Layout title={"test"}>
-  <div class="space-y-6">
-    <section class="space-y-4 text-center p-5">
-      <h1 class="text-3xl font-bold mb-6 capitalize">
-        Thème : {JSON.stringify(category)}
-      </h1>
-    </section>
-  </div>
+<Layout title={categoryMeta[category].label}>
+  {
+    (
+      <main class="px-10">
+        <section class="flex flex-row items-center gap-4">
+          <Icon
+            className="w-14 h-14"
+            style={{ stroke: `var(--${categoryMeta[category].color})` }}
+          />
+          <h2 class="text-4xl">{categoryMeta[category].label}</h2>
+        </section>
+      </main>
+    )
+  }
 </Layout>

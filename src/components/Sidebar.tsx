@@ -3,14 +3,20 @@ import { CategoryList } from "./CategoryList";
 import { ModeToggle } from "./ModeToggle";
 import { SearchBar } from "./SearchBar";
 import { Button } from "./ui/button";
+import type { CategoryCount } from "@/lib/categories";
 
-export function Sidebar({ categories }) {
+export function Sidebar({ categories }: { categories: CategoryCount[] }) {
   return (
-    <div className="flex h-full flex-col justify-between gap-8 border-r border-neutral-200 pt-24 pb-8 px-8">
+    <div className="flex h-full w-64 flex-col justify-between gap-8 border-r border-neutral-200 pt-24 pb-8 pl-8 pr-15">
       <div>
         <div className="flex flex-row items-center mb-3">
-          <h1 className="font-semibold text-2xs">Digital Garden</h1>
-          <Sprout className="w-4 h-4 pl-1" />
+          <a href={`/`}>
+            <h1 className="font-semibold text-2xs">
+              Temple of <br />
+              Reflection
+            </h1>
+          </a>
+          {/* <Sprout className="w-4 h-4 pl-1" /> */}
         </div>
         <SearchBar />
       </div>
@@ -20,7 +26,7 @@ export function Sidebar({ categories }) {
         <CategoryList categories={categories} />
       </div>
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row gap-2">
         <Button variant="outline" size="icon">
           <Github />
         </Button>

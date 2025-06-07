@@ -9,7 +9,6 @@ import { List } from "lucide-react";
 import { CategoryList } from "./CategoryList";
 
 export function CategoryDialog({ categories }) {
-  console.log("categories DIALOG", categories);
   return (
     <Dialog>
       <DialogTrigger asChild>

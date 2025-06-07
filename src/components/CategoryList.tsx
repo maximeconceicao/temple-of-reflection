@@ -1,24 +1,12 @@
-// components/ThemeList.tsx
-
-import { GardenCategory, gardenCategoryLabelMap } from "@/constants";
-import { PersonStanding, Guitar, Binary, Shell, Sprout } from "lucide-react";
-
-const iconMap = {
-  [GardenCategory.SPIRITUALITY]: Shell,
-  [GardenCategory.MUSIC]: Guitar,
-  [GardenCategory.SOCIETY]: PersonStanding,
-  [GardenCategory.TECH]: Binary,
-};
-
-const colorMap = {
-  [GardenCategory.SPIRITUALITY]: "chart-1",
-  [GardenCategory.MUSIC]: "chart-5",
-  [GardenCategory.SOCIETY]: "chart-3",
-  [GardenCategory.TECH]: "chart-2",
-};
+import {
+  categoryMeta,
+  GardenCategory,
+  type CategoryCount,
+} from "@/lib/categories";
+import { Sprout } from "lucide-react";
 
 type CategoryListProps = {
-  categories: { category: GardenCategory; count: number }[];
+  categories: CategoryCount[];
   className?: string;
 };
 
@@ -26,13 +14,12 @@ export function CategoryList({
   categories,
   className = "",
 }: CategoryListProps) {
-  console.log("categories", categories);
   return (
     <ul className={className}>
       {categories.map(({ category, count }) => {
-        const Icon = iconMap[category] || Sprout;
-        const color = colorMap[category] || "chart-0";
-        const label = gardenCategoryLabelMap[category] || category;
+        const Icon = categoryMeta[category].icon || Sprout;
+        const color = categoryMeta[category].color || "chart-0";
+        const label = categoryMeta[category].label || category;
 
         return (
           <li key={category}>

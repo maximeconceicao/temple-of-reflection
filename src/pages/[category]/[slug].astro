@@ -2,25 +2,34 @@
 import type { APIContext } from "astro";
 import { getCollection } from "astro:content";
 import { Markdown } from "astro/components";
+import { allCategories } from "@/lib/categories";
 
 export async function getStaticPaths() {
-  const allEntries = await getCollection("garden");
+  const allPaths = await Promise.all(
+    allCategories.map(async (category) => {
+      const entries = await getCollection(category);
+      return entries.map((entry) => ({
+        params: {
+          category,
+          slug: entry.slug,
+        },
+      }));
+    })
+  );
 
-  return allEntries.map((entry) => ({
-    params: {
-      category: entry.data.category,
-      slug: entry.slug,
-    },
-  }));
+  return allPaths.flat();
 }
 
 export async function get({ params }: APIContext) {
-  const allEntries = await getCollection("garden");
+  const { category, slug } = params;
 
-  const matchedEntry = allEntries.find(
-    (entry) =>
-      entry.data.category === params.category && entry.slug === params.slug
-  );
+  if (!category || !slug || !allCategories.includes(category as any)) {
+    return new Response("Paramètres invalides", { status: 404 });
+  }
+
+  const entries = await getCollection(category as any);
+
+  const matchedEntry = entries.find((entry) => entry.slug === slug);
 
   if (!matchedEntry) {
     return new Response("Contenu non trouvé", { status: 404 });
@@ -38,6 +47,8 @@ const { entry } = Astro.props;
 
 <article class="prose lg:prose-xl mx-auto">
   <h1>{entry.data.title}</h1>
-  <p class="text-sm text-gray-500">{entry.data.type} — {entry.data.category}</p>
+  <p class="text-sm text-gray-500">
+    {entry.data.type} — {entry.data.category}
+  </p>
   <Markdown content={entry.body} />
 </article>
