@@ -2,11 +2,16 @@ import { Home } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 import { SearchButton } from "./SearchButton";
 import { CategoryDialog } from "./CategoryDialog";
+import type { CategoryCount } from "@/lib/categories";
 
-export default function BottomNav({ categories }) {
+export default function BottomNav({
+  categories,
+}: {
+  categories: CategoryCount[];
+}) {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex h-full max-h-14">
-      <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background backdrop-blur-lg mask-gradient-to-top" />
+      <div className="fixed bottom-0 inset-x-0 h-16 w-full mask-gradient-to-top" />
       <div className="relative z-50 mx-auto flex h-full min-h-full items-center gap-1 rounded-full border border-border bg-background p-2 shadow-md pointer-events-auto">
         <a
           href={"/"}
