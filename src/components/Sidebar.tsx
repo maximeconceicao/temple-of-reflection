@@ -7,7 +7,7 @@ import type { CategoryCount } from "@/lib/categories";
 
 export function Sidebar({ categories }: { categories: CategoryCount[] }) {
   return (
-    <div className="flex h-full w-64 flex-col justify-between gap-8 border-r border-neutral-200 pt-24 pb-8 pl-8 pr-15">
+    <div className="flex h-full w-64 flex-col justify-between gap-8 border-r border-border pt-24 pb-8 pl-8 pr-15">
       <div>
         <div className="flex flex-row items-center mb-3">
           <a href={`/`}>
