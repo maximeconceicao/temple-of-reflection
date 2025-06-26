@@ -1,5 +1,5 @@
 ---
-title: "L'âme délivrée"
+title: "L'âme délivrée 2"
 category: "spirituality"
 type: "reading-notes"
 categories:
@@ -8,5 +8,4 @@ categories:
   - développement personnel
 pubDate: 2023-11-20
 description: "Réflexions de Thoreau sur la simplicité, la nature et la société."
-heroImage: "/images/spirituality/the-untethered-soul.png"
 ---

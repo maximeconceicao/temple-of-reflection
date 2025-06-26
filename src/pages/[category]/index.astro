@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
+import BreadcrumbNav from "@/components/BreadcrumbNav.astro";
 
 export async function getStaticPaths() {
   return allCategories.map((category) => ({
@@ -39,13 +40,43 @@ const Icon = categoryMeta[category].icon;
 <Layout title={categoryMeta[category].label}>
   {
     (
-      <main class="px-10">
+      <main>
         <section class="flex flex-row items-center gap-4">
           <Icon
             className="w-14 h-14"
             style={{ stroke: `var(--${categoryMeta[category].color})` }}
           />
           <h2 class="text-4xl">{categoryMeta[category].label}</h2>
+        </section>
+
+        <section class="mt-4 mb-8">
+          <BreadcrumbNav
+            items={[
+              { label: "Home", href: "/" },
+              { label: categoryMeta[category].label, href: `/${category}` },
+            ]}
+          />
+        </section>
+
+        <section class="grid grid-cols-1">
+          <div class="grid grid-cols-3 text-sm text-left border-b pb-1">
+            <span>/DATE</span>
+            <span>/TITRE</span>
+            <span>/TYPE</span>
+          </div>
+          {entriesSorted.map((entry) => (
+            <div class="grid grid-cols-3 py-2 border-b">
+              <span>{new Date(entry.data.pubDate).toLocaleDateString()}</span>
+              <a
+                href={`/${category}/${entry.slug}`}
+                class="hover:underline"
+                style={{ color: `var(--${categoryMeta[category].color})` }}
+              >
+                {entry.data.title}
+              </a>
+              <span>{entry.data.type}</span>
+            </div>
+          ))}
         </section>
       </main>
     )
