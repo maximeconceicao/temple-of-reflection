@@ -1,5 +1,4 @@
 ---
-import type { APIContext } from "astro";
 import { getCollection } from "astro:content";
 import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
 import Layout from "@/layouts/Layout.astro";
@@ -8,12 +7,13 @@ import BreadcrumbNav from "@/components/BreadcrumbNav.astro";
 export async function getStaticPaths() {
   const allPaths = await Promise.all(
     allCategories.map(async (category) => {
-      const entries = await getCollection(category);
+      const entries = await getCollection(category as GardenCategory);
       return entries.map((entry) => ({
         params: {
           category,
           slug: entry.slug,
         },
+        props: { entry, category, slug: entry.slug }, // <- ici
       }));
     })
   );
@@ -21,25 +21,14 @@ export async function getStaticPaths() {
   return allPaths.flat();
 }
 
-const { category, slug } = Astro.params;
-
-if (!category || !slug || !allCategories.includes(category as any)) {
-  return new Response("Paramètres invalides", { status: 404 });
-}
-
-const entries = await getCollection(category as GardenCategory);
-
-const entry = entries.find((entry) => entry.slug === slug);
-
-if (!entry) {
-  return new Response("Contenu non trouvé", { status: 404 });
-}
+const { entry, category, slug } = Astro.props;
+const { Content } = await entry.render();
 ---
 
 <Layout title={"test"}>
-  <article class="prose lg:prose-xl mx-auto">
+  <article class="mx-auto">
     <section class="flex flex-row items-center gap-4">
-      <h2 class="text-4xl">{entry.data.title}</h2>
+      <h2 class="text-4xl font-extrabold">{entry.data.title}</h2>
     </section>
     <section class="mt-4 mb-8">
       <BreadcrumbNav
@@ -63,9 +52,8 @@ if (!entry) {
         )
       }
     </div>
-    <p class="text-sm text-gray-500">
-      <!-- {entry.data.type} — {entry.data.category} -->
-    </p>
-    <!-- <Markdown content={entry.body} /> -->
+    <div class="prose dark:prose-invert w-full">
+      <Content />
+    </div>
   </article>
 </Layout>
