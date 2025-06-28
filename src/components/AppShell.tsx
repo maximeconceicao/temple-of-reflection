@@ -3,14 +3,17 @@ import BottomNav from "./BottomNav";
 import { SearchCommandDialog } from "./SearchCommandDialog";
 import { Sidebar } from "./Sidebar";
 import type { CategoryCount } from "@/lib/categories";
-import { TableOfContents } from "lucide-react";
+import type { TocItem } from "@/lib/types";
+import TableOfContents from "./TableOfContents";
 
 export default function AppShell({
   children,
   categories,
+  toc,
 }: {
   children: React.ReactNode;
   categories: CategoryCount[];
+  toc: TocItem[];
 }) {
   return (
     <CommandDialogProvider>
@@ -21,7 +24,7 @@ export default function AppShell({
         {children}
       </main>
       <div className="hidden xl:block xl:sticky xl:top-24 xl:h-[calc(100vh-6rem)] w-64 shrink-0 px-4">
-        <TableOfContents />
+        <TableOfContents toc={toc} />
       </div>
       <div className="lg:hidden h-20">
         <BottomNav categories={categories} />

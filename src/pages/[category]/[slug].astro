@@ -22,10 +22,11 @@ export async function getStaticPaths() {
 }
 
 const { entry, category, slug } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
+console.log("headings", headings);
 ---
 
-<Layout title={"test"}>
+<Layout title={"test"} toc={headings}>
   <article class="mx-auto">
     <section class="flex flex-row items-center gap-4">
       <h2 class="text-4xl font-extrabold">{entry.data.title}</h2>
@@ -41,18 +42,21 @@ const { Content } = await entry.render();
     </section>
     <div class="hero-image mt-7">
       {
-        entry.data.heroImage && (
+        entry.data.heroImageDark && entry.data.heroImageLight && (
           <img
-            width="100%"
-            height={510}
-            src={entry.data.heroImage}
-            alt=""
-            class="w-full h-auto rounded-md my-7"
-          />
+        src={entry.data.heroImageLight}
+        alt=""
+        class="block dark:hidden w-full h-auto rounded-md my-7"
+      />
+      <img
+        src={entry.data.heroImageDark}
+        alt=""
+        class="hidden dark:block w-full h-auto rounded-md my-7"
+      />
         )
       }
     </div>
-    <div class="prose dark:prose-invert w-full">
+    <div class="prose dark:prose-invert max-w-none w-full">
       <Content />
     </div>
   </article>
