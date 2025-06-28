@@ -12,6 +12,10 @@ heroImageLight: "/images/spirituality/the-untethered-soul-light.png"
 heroImageDark: "/images/spirituality/the-untethered-soul-dark.png"
 ---
 
+> **Tu n'es pas la voix dans ta tête. Tu es celui qui l'entend.**
+
+_- Michael A. Singer_
+
 ## 🗂 Informations Générales
 
 - **Titre original** : _The Untethered Soul_
@@ -37,7 +41,7 @@ Dans _L'âme délivrée_, Michael A. Singer explore la nature de la conscience e
 
 ## 🔑 Points Clés
 
-### I. 🧠 L'Observateur — la conscience pure
+### 1. 🧠 L'Observateur — la conscience pure
 
 - **Tu n'es pas tes pensées, ni tes émotions, ni ton corps.** Tu es celui qui en fait l'expérience : l'observateur silencieux et stable.
 - **Observer sans réagir libère.** Ce recul brise l'identification à l'ego et ouvre un espace de paix.
@@ -47,7 +51,7 @@ Dans _L'âme délivrée_, Michael A. Singer explore la nature de la conscience e
 
 ---
 
-### II. 🌊 Les Énergies — le flux intérieur
+### 2. 🌊 Les Énergies — le flux intérieur
 
 - **Le cœur est un centre énergétique.** Il s'ouvre ou se ferme selon les expériences vécues.
 - **L'énergie circule librement quand il n'y a pas de résistance.** Peurs, blessures et attachements créent des blocages et alimentent souffrance et fatigue.
@@ -56,7 +60,7 @@ Dans _L'âme délivrée_, Michael A. Singer explore la nature de la conscience e
 
 ---
 
-### III. 🕊 Lâcher prise — la non-résistance
+### 3. 🕊 Lâcher prise — la non-résistance
 
 - **La souffrance vient de la résistance à ce qui est.** Tout est impermanent : s'accrocher génère douleur.
 - **Lâcher prise n'est pas fuir, c'est se libérer.** C'est un acte de confiance envers la vie.
@@ -65,7 +69,7 @@ Dans _L'âme délivrée_, Michael A. Singer explore la nature de la conscience e
 
 ---
 
-### IV. 🧩 Les structures mentales — ego & conditionnements
+### 4. 🧩 Les structures mentales — ego & conditionnements
 
 - **Le mental construit une réalité subjective pour se protéger.** Elle repose sur nos peurs, blessures et attentes.
 - **Le mental veut contrôler pour être bien, mais cela renforce l'ego.** En croyant devoir maîtriser la vie pour être heureux, on alimente un cercle sans fin de peur et de contrôle.
@@ -78,7 +82,7 @@ Dans _L'âme délivrée_, Michael A. Singer explore la nature de la conscience e
 
 ---
 
-### V. 😊 Bonheur inconditionnel
+### 5. 😊 Bonheur inconditionnel
 
 - **Le vrai bonheur est un choix indépendant des circonstances.** Il naît du non-attachement, pas du contrôle.
 - **Ce choix est à renouveler continuellement**, surtout quand les anciens schémas mentaux refont surface.
@@ -91,7 +95,7 @@ Dans _L'âme délivrée_, Michael A. Singer explore la nature de la conscience e
 
 ---
 
-### VI. ⚰️ La Mort — et la vie pleinement vécue
+### 6. ⚰️ La Mort — et la vie pleinement vécue
 
 _"Si vous vivez pleinement chacune de vos expériences, alors la mort de vous privera de rien. Il n'y a rien qu'on puisse vous enlever, car vous êtes déjà épanoui. C'est pourquoi le sage est toujours prêt à mourir. Cela ne fait aucune différence pour lui, car son expérience de la vie est déjà entièrement complète."_
 
@@ -104,7 +108,7 @@ _"Si vous vivez pleinement chacune de vos expériences, alors la mort de vous pr
 
 ## Avis Personnel
 
-#### ✅ **Points positifs**
+#### ✅ **Les (+)**
 
 1. **Accessibilité du langage**  
    → Une écriture claire et simple, qui rend des idées spirituelles profondes compréhensibles même sans bagage philosophique ou religieux.
@@ -117,15 +121,15 @@ _"Si vous vivez pleinement chacune de vos expériences, alors la mort de vous pr
 4. **Un impact transformateur pour de nombreux lecteurs**  
    → Beaucoup témoignent d'un vrai changement dans leur rapport au mental, au stress et à la souffrance, faisant de ce livre une véritable expérience intérieure.
 
-#### ❌ **Points négatifs**
+#### ❌ **Les (&minus;)**
 
-1. **Manque de structure**
+1. **Manque de structure**<br>
    → Les thèmes principaux se distinguent bien, mais la progression n'est pas si claire et peut donner l'impression que les idées reviennent en boucle.
 
-2. **Risque de simplification excessive**
+2. **Risque de simplification excessive**<br>
    → Le message du lâcher-prise peut paraître naïf face à des blessures psychiques complexes ou à des traumas, en donnant l'impression qu'il suffit de “laisser passer”.
 
-3. **Accent exclusif sur le détachement**
+3. **Accent exclusif sur le détachement**<br>
    → Si le détachement est bien au cœur du chemin de libération, le livre **ne nuance peut être pas suffisamment en montrant qu'observer ses pensées peut aussi mener à les comprendre et à les transformer**. Une articulation plus claire entre **l'accueil des pensées** et **le travail intérieur actif** aurait pu être intéressante.
 
 ## Conclusion
@@ -137,5 +141,3 @@ Les idées de non-identification aux pensées, de pleine conscience, d'observati
 Ce qui rend _L'âme délivrée_ particulièrement marquant, c'est **sa capacité à traduire ces vérités fondamentales dans un langage simple, direct, et profondément accessible**. L'auteur parvient ainsi à ouvrir une porte, claire et inspirante, vers un **chemin de libération intérieure** que beaucoup jugent abstrait ou réservé à une élite spirituelle.
 
 👉 **Et si l'on arrêtait de croire tout ce que pense notre mental ? Qui serions-nous alors ?**
-
-« Tu n'es pas la voix dans ta tête. Tu es celui qui l'entend. »

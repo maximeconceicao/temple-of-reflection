@@ -23,7 +23,6 @@ export async function getStaticPaths() {
 
 const { entry, category, slug } = Astro.props;
 const { Content, headings } = await entry.render();
-console.log("headings", headings);
 ---
 
 <Layout title={"test"} toc={headings}>
