@@ -23,12 +23,18 @@ export async function getStaticPaths() {
 
 const { entry, category, slug } = Astro.props;
 const { Content, headings } = await entry.render();
+
+const Icon = categoryMeta[category].icon;
 ---
 
 <Layout title={"test"} toc={headings}>
   <article class="mx-auto">
     <section class="flex flex-row items-center gap-4">
-      <h2 class="text-4xl font-extrabold">{entry.data.title}</h2>
+        <Icon
+            className="w-10 h-10"
+            style={{ stroke: `var(--${categoryMeta[category].color})` }}
+          />
+      <h2 class="text-4xl font-semibold">{entry.data.title}</h2>
     </section>
     <section class="mt-4 mb-8">
       <BreadcrumbNav

@@ -8,10 +8,12 @@ import TableOfContents from "./TableOfContents";
 
 export default function AppShell({
   children,
+  entries,
   categories,
   toc,
 }: {
   children: React.ReactNode;
+  entries: any[];
   categories: CategoryCount[];
   toc: TocItem[];
 }) {
@@ -29,7 +31,7 @@ export default function AppShell({
       <div className="lg:hidden h-20">
         <BottomNav categories={categories} />
       </div>
-      <SearchCommandDialog />
+      <SearchCommandDialog entries={entries} />
     </CommandDialogProvider>
   );
 }
