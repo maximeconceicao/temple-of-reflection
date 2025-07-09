@@ -1,7 +1,7 @@
 ---
 title: "Écotopia"
 category: "society"
-type: "reading-notes"
+type: "book"
 categories:
   - nature
   - philosophie
@@ -162,9 +162,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 - Adaptation des rythmes (travail, apprentissage, transport) aux cycles naturels et humains : recherche d'une efficacité douce.
 - Urbanisme modulaire : bâtiments évolutifs, quartiers adaptables aux besoins changeants de la communauté.
 - Logique d'optimisation écologique : maximiser l'impact positif tout en réduisant l'empreinte matérielle.
-
 - Utilisation raisonnée de certaines technologies avancées (transports, communication), à condition qu'elles soient compatibles avec les principes écologiques.
-
 - Do It Yourself
 
 ---
@@ -206,7 +204,6 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 - Célébration des saisons, rituels collectifs (comme les stages en forêt, les fêtes), pratiques de reconnexion.
 - **Spiritualité incarnée et immanente**, ancrée dans le présent et le vivant.
 - Respect du mystère, de l'intuition, de la lenteur — refus d'une vision purement utilitariste de l'existence.
-
 - **La mort est intégrée avec calme et lucidité** : elle n'est ni taboue, ni dramatisée, mais reconnue comme une part du cycle naturel. Les mourants sont accompagnés dans un cadre communautaire et respectueux.
 
 ---
@@ -236,6 +233,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 1. **Vision écologiste avant-gardiste**  
    → Une anticipation lucide des enjeux environnementaux, bien avant leur mise en débat public à grande échelle.
+
 2. **Accessibilité du récit**  
    → Une écriture fluide, entre roman de fiction et reportage journalistique, qui rend la lecture plaisante et instructive à la fois.
 

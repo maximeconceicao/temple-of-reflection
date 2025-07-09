@@ -1,8 +1,14 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
+import {
+  allCategories,
+  categoryMeta,
+  typeMeta,
+  GardenCategory,
+} from "@/lib/categories";
 import BreadcrumbNav from "@/components/BreadcrumbNav.astro";
+import { Square } from "lucide-react";
 
 export async function getStaticPaths() {
   return allCategories.map((category) => ({
@@ -59,24 +65,33 @@ const Icon = categoryMeta[category].icon;
         </section>
 
         <section class="grid grid-cols-1">
-          <div class="grid grid-cols-3 text-sm text-left border-b pb-1">
+          <div class="hidden sm:grid grid-cols-3 text-sm text-left border-b pb-1">
             <span>/DATE</span>
             <span>/TITRE</span>
             <span>/TYPE</span>
           </div>
-          {entriesSorted.map((entry) => (
-            <div class="grid grid-cols-3 py-2 border-b">
-              <span>{new Date(entry.data.pubDate).toLocaleDateString()}</span>
-              <a
-                href={`/${category}/${entry.slug}`}
-                class="hover:underline"
-                style={{ color: `var(--${categoryMeta[category].color})` }}
-              >
-                {entry.data.title}
-              </a>
-              <span>{entry.data.type}</span>
-            </div>
-          ))}
+          {entriesSorted.map((entry) => {
+            const date = new Date(entry.data.pubDate);
+            const formattedDate = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, "0")}.${String(date.getDate()).padStart(2, "0")}`;
+            return (
+              <div class="grid grid-cols-1 sm:grid-cols-3 py-2 border-b gap-1 sm:gap-0">
+                <div class="flex flex-row items-center">
+                  <Square className="w-2 h-2 mr-1" fill="var(--foreground)" />
+                  <span class="text-sm ">{formattedDate}</span>
+                </div>
+                <a
+                  href={`/${category}/${entry.slug}`}
+                  class="hover:underline text-lg"
+                  style={{ color: `var(--${categoryMeta[category].color})` }}
+                >
+                  {entry.data.title}
+                </a>
+                <span class="hidden sm:flex items-center border px-2 py-0.5 rounded text-xs w-fit">
+                  {typeMeta[entry.data.type].label.toUpperCase()}
+                </span>{" "}
+              </div>
+            );
+          })}
         </section>
       </main>
     )

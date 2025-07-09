@@ -1,7 +1,7 @@
 ---
 title: "Clean Code"
 category: "tech"
-type: "reading-notes"
+type: "book"
 categories:
   - nature
   - philosophie

@@ -1,3 +1,4 @@
+import { categoryMeta, type GardenCategory } from "@/lib/categories";
 import type { TocItem } from "@/lib/types";
 import React, { useEffect, useState } from "react";
 
@@ -14,8 +15,16 @@ function shortenTitle(title: string, maxLength = 30) {
   return shortTitle.slice(0, maxLength).trimEnd() + "…";
 }
 
-export default function TableOfContents({ toc }: { toc: TocItem[] }) {
+export default function TableOfContents({
+  toc,
+  category,
+}: {
+  toc?: TocItem[];
+  category?: GardenCategory;
+}) {
   const [activeId, setActiveId] = React.useState<string | null>(null);
+
+  const color = category ? categoryMeta[category].color : "chart-0";
 
   useEffect(() => {
     if (!toc || toc.length === 0) return;
@@ -59,10 +68,13 @@ export default function TableOfContents({ toc }: { toc: TocItem[] }) {
           >
             <a
               href={`#${item.slug}`}
+              style={{
+                color: activeId === item.slug ? `var(--${color})` : undefined,
+              }}
               className={
                 activeId === item.slug
-                  ? "text-blue-600 dark:text-blue-400 font-semibold"
-                  : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  ? "font-semibold hover:underline"
+                  : "text-gray-700 dark:text-gray-300 hover:underline transition-colors"
               }
             >
               {shortenTitle(item.text)}

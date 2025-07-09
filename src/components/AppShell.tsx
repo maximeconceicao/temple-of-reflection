@@ -2,7 +2,7 @@ import { CommandDialogProvider } from "@/components/CommandDialogContext";
 import BottomNav from "./BottomNav";
 import { SearchCommandDialog } from "./SearchCommandDialog";
 import { Sidebar } from "./Sidebar";
-import type { CategoryCount } from "@/lib/categories";
+import type { CategoryCount, GardenCategory } from "@/lib/categories";
 import type { TocItem } from "@/lib/types";
 import TableOfContents from "./TableOfContents";
 
@@ -11,11 +11,13 @@ export default function AppShell({
   entries,
   categories,
   toc,
+  category,
 }: {
   children: React.ReactNode;
   entries: any[];
   categories: CategoryCount[];
-  toc: TocItem[];
+  toc?: TocItem[];
+  category?: GardenCategory;
 }) {
   return (
     <CommandDialogProvider>
@@ -26,7 +28,7 @@ export default function AppShell({
         {children}
       </main>
       <div className="hidden xl:block xl:sticky xl:top-24 xl:h-[calc(100vh-6rem)] w-64 shrink-0">
-        <TableOfContents toc={toc} />
+        <TableOfContents toc={toc} category={category} />
       </div>
       <div className="lg:hidden h-20">
         <BottomNav categories={categories} />

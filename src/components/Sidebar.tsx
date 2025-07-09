@@ -1,4 +1,4 @@
-import { Github, Sprout } from "lucide-react";
+import { Github } from "lucide-react";
 import { CategoryList } from "./CategoryList";
 import { ModeToggle } from "./ModeToggle";
 import { SearchBar } from "./SearchBar";
@@ -12,11 +12,10 @@ export function Sidebar({ categories }: { categories: CategoryCount[] }) {
         <div className="flex flex-row items-center mb-3">
           <a href={`/`}>
             <h1 className="font-semibold text-2xs">
-              Temple of <br />
+              <span className="text-primary">Temple</span> of <br />
               Reflection
             </h1>
           </a>
-          {/* <Sprout className="w-4 h-4 pl-1" /> */}
         </div>
         <SearchBar />
       </div>

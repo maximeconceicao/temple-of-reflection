@@ -1,7 +1,7 @@
 ---
 title: "L'âme délivrée"
 category: "spirituality"
-type: "reading-notes"
+type: "book"
 categories:
   - nature
   - philosophie
