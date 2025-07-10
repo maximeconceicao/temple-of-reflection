@@ -1,0 +1,13 @@
+---
+import { Square } from "lucide-react";
+
+interface Props {
+  formattedDate: string;
+}
+const { formattedDate } = Astro.props;
+---
+
+<div class="flex flex-row items-center">
+  <Square className="w-2 h-2 mr-1" fill="var(--foreground)" />
+  <span class="text-sm">{formattedDate}</span>
+</div>

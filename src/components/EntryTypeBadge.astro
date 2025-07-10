@@ -9,8 +9,6 @@ const { type } = Astro.props;
 const label = typeMeta[type].label.toUpperCase();
 ---
 
-<span
-  class="hidden sm:flex items-center border px-2 py-0.5 rounded text-xs w-fit"
->
+<span class="flex items-center border px-2 py-0.5 rounded text-xs w-fit">
   {label}
 </span>
