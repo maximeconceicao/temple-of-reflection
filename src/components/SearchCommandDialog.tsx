@@ -43,7 +43,7 @@ export function SearchCommandDialog({ entries }: { entries: GardenEntry[] }) {
         onValueChange={setQuery}
       />
       <CommandList>
-        <CommandEmpty>No results found.</CommandEmpty>
+        <CommandEmpty>Aucune note trouvée.</CommandEmpty>
         <CommandGroup heading={query ? "Résultat(s)" : "Dernières notes"}>
           {results.map((note) => (
             <CommandItem
