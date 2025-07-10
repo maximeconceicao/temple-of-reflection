@@ -146,8 +146,8 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 - Refus du prosélytisme : "vivre l'exemple" plutôt que l'imposer.
 - Échanges culturels et scientifiques encouragés, mais dans une logique de réciprocité.
 - Défense du droit à l'autodétermination écologique et culturelle des peuples.
-- **Capacité militaire dissuasive maintenue pour assurer la souveraineté nationale, malgré le pacifisme affiché.**
-- **Tension géopolitique persistante avec les États-Unis : surveillance, méfiance, confrontation idéologique larvée.**
+- Capacité militaire dissuasive maintenue pour assurer la souveraineté nationale, malgré le pacifisme affiché.
+- Tension géopolitique persistante avec les États-Unis : surveillance, méfiance, confrontation idéologique larvée.
 
 ---
 

@@ -9,20 +9,9 @@ const schema = z.object({
   type: z.nativeEnum(GardenType),
   tags: z.array(z.string()).optional(),
   pubDate: z.coerce.date(),
-  // Transform string to Date object
-  // pubDate: z.coerce.date(),
-  // updatedDate: z.coerce.date().optional(),
+  updatedDate: z.coerce.date().optional(),
   heroImageLight: z.string().optional(),
   heroImageDark: z.string().optional(),
-
-  // breadcrumbs: z
-  //   .array(
-  //     z.object({
-  //       name: z.string(),
-  //       url: z.string(),
-  //     })
-  //   )
-  //   .optional(),
 });
 
 export const collections = Object.fromEntries(

@@ -3,7 +3,7 @@ import BottomNav from "./BottomNav";
 import { SearchCommandDialog } from "./SearchCommandDialog";
 import { Sidebar } from "./Sidebar";
 import type { CategoryCount, GardenCategory } from "@/lib/categories";
-import type { TocItem } from "@/lib/types";
+import type { GardenEntry, TocItem } from "@/lib/types";
 import TableOfContents from "./TableOfContents";
 
 export default function AppShell({
@@ -14,7 +14,7 @@ export default function AppShell({
   category,
 }: {
   children: React.ReactNode;
-  entries: any[];
+  entries: GardenEntry[];
   categories: CategoryCount[];
   toc?: TocItem[];
   category?: GardenCategory;

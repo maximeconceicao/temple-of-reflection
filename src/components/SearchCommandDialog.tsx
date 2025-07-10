@@ -1,44 +1,35 @@
-// components/SearchCommandDialog.tsx
 import {
   CommandDialog,
-  CommandInput,
-  CommandList,
   CommandEmpty,
   CommandGroup,
+  CommandInput,
   CommandItem,
-  CommandSeparator,
-  CommandShortcut,
+  CommandList,
 } from "@/components/ui/command";
-import {
-  Calendar,
-  Smile,
-  Calculator,
-  User,
-  CreditCard,
-  Settings,
-} from "lucide-react";
 
 import { useCommandDialog } from "@/components/CommandDialogContext";
-import { useState, useMemo, useEffect } from "react";
 import Fuse from "fuse.js";
+import { useEffect, useMemo, useState } from "react";
+import { categoryMeta } from "@/lib/categories";
+import type { GardenEntry } from "@/lib/types";
 
-export function SearchCommandDialog({ entries: notes }: { entries: any[] }) {
+export function SearchCommandDialog({ entries }: { entries: GardenEntry[] }) {
   const { open, setOpen } = useCommandDialog();
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState(notes);
+  const [results, setResults] = useState(entries);
 
-  console.log("notes", notes);
+  console.log("entries", entries);
 
   const fuse = useMemo(() => {
-    return new Fuse(notes, {
+    return new Fuse(entries, {
       keys: ["data.title", "data.category"],
-      threshold: 0.4,
+      threshold: 0.5,
     });
-  }, [notes]);
+  }, [entries]);
 
   useEffect(() => {
     if (!query) {
-      setResults(notes);
+      setResults(entries);
     } else {
       const results = fuse.search(query).map((res) => res.item);
       setResults(results);
@@ -48,59 +39,27 @@ export function SearchCommandDialog({ entries: notes }: { entries: any[] }) {
   return (
     <CommandDialog open={open} onOpenChange={setOpen}>
       <CommandInput
-        placeholder="Type a command or search..."
+        placeholder="Rechercher une note..."
         onValueChange={setQuery}
       />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
-        {/* <CommandGroup heading="Suggestions">
-          <CommandItem>
-            <Calendar />
-            <span>Calendar</span>
-          </CommandItem>
-          <CommandItem>
-            <Smile />
-            <span>Search Emoji</span>
-          </CommandItem>
-          <CommandItem>
-            <Calculator />
-            <span>Calculator</span>
-          </CommandItem>
-        </CommandGroup> */}
-        <CommandGroup heading="Notes">
+        <CommandGroup heading={query ? "Résultat(s)" : "Dernières notes"}>
           {results.map((note) => (
             <CommandItem
-              key={note.path}
+              key={note.slug}
               onSelect={() => {
                 setOpen(false);
-                window.location.href = note.path;
+                window.location.href = `/${note.data.category}/${note.slug}`;
               }}
             >
               <span>{note.data.title}</span>
               <span className="ml-auto text-muted-foreground text-sm">
-                [{note.data.category}]
+                [{categoryMeta[note.data.category].label}]
               </span>
             </CommandItem>
           ))}
         </CommandGroup>
-        {/* <CommandSeparator />
-        <CommandGroup heading="Settings">
-          <CommandItem>
-            <User />
-            <span>Profile</span>
-            <CommandShortcut>⌘P</CommandShortcut>
-          </CommandItem>
-          <CommandItem>
-            <CreditCard />
-            <span>Billing</span>
-            <CommandShortcut>⌘B</CommandShortcut>
-          </CommandItem>
-          <CommandItem>
-            <Settings />
-            <span>Settings</span>
-            <CommandShortcut>⌘S</CommandShortcut>
-          </CommandItem>
-        </CommandGroup> */}
       </CommandList>
     </CommandDialog>
   );
