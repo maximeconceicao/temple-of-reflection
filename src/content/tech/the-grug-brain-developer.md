@@ -1,8 +1,8 @@
 ---
-title: "Clean Code"
+title: "The Grug Brained Developer"
 category: "tech"
 type: "book"
-categories:
+tags:
   - nature
   - philosophie
   - développement personnel

@@ -23,7 +23,6 @@ _- Michael A. Singer_
 - **Année de publication** : 2007
 - **Catégories** : Développement personnel, Spiritualité
 - **Pages** : 320
-- **Références citées** : — (non listées)
 
 ---
 

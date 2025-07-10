@@ -65,7 +65,7 @@ const Icon = categoryMeta[category].icon;
         </section>
 
         <section class="grid grid-cols-1">
-          <div class="hidden sm:grid grid-cols-3 text-sm text-left border-b pb-1">
+          <div class="hidden sm:grid grid-cols-[1fr_4fr_1fr] text-sm text-left border-b pb-1">
             <span>/DATE</span>
             <span>/TITRE</span>
             <span>/TYPE</span>
@@ -74,7 +74,7 @@ const Icon = categoryMeta[category].icon;
             const date = new Date(entry.data.pubDate);
             const formattedDate = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, "0")}.${String(date.getDate()).padStart(2, "0")}`;
             return (
-              <div class="grid grid-cols-1 sm:grid-cols-3 py-2 border-b gap-1 sm:gap-0">
+              <div class="grid grid-cols-1 sm:grid-cols-[1fr_4fr_1fr] py-2 border-b gap-1 sm:gap-0">
                 <div class="flex flex-row items-center">
                   <Square className="w-2 h-2 mr-1" fill="var(--foreground)" />
                   <span class="text-sm ">{formattedDate}</span>
