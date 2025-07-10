@@ -1,8 +1,8 @@
 import { categoryMeta, type GardenCategory } from "@/lib/categories";
 import type { TocItem } from "@/lib/types";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
-function shortenTitle(title: string, maxLength = 30) {
+function shortenTitle(title: string, maxLength = 28) {
   const dashIndex =
     title.indexOf("—") !== -1 ? title.indexOf("—") : title.indexOf("-");
 
@@ -22,7 +22,8 @@ export default function TableOfContents({
   toc?: TocItem[];
   category?: GardenCategory;
 }) {
-  const [activeId, setActiveId] = React.useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
 
   const color = category ? categoryMeta[category].color : "chart-0";
 
@@ -53,10 +54,40 @@ export default function TableOfContents({
     };
   }, [toc]);
 
+  // Scroll automatique du sommaire pour que l'élément actif soit visible
+  useEffect(() => {
+    if (!navRef.current) return;
+
+    if (!activeId) {
+      // Aucun élément actif : scroll en haut du sommaire
+      navRef.current.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const activeLink = navRef.current.querySelector<HTMLAnchorElement>(
+      `a[href="#${activeId}"]`
+    );
+    if (!activeLink) return;
+
+    const container = navRef.current;
+    const containerRect = container.getBoundingClientRect();
+    const activeRect = activeLink.getBoundingClientRect();
+
+    if (
+      activeRect.top < containerRect.top ||
+      activeRect.bottom > containerRect.bottom
+    ) {
+      activeLink.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [activeId]);
+
   if (!toc || toc.length === 0) return null;
 
   return (
-    <nav className="sticky top-24 text-sm leading-relaxed">
+    <nav
+      ref={navRef}
+      className="sticky top-24 max-h-[calc(100vh-6rem)] overflow-y-auto pr-2 pb-8 text-sm leading-relaxed"
+    >
       <h2 className="mb-4 font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">
         Sommaire
       </h2>

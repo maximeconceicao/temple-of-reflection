@@ -40,7 +40,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-## 🔑 Points Clés (Société Écotopienne)
+## 🔑 Points Clés
 
 ### 🌱 1. **Écologie et rapport à la nature**
 
