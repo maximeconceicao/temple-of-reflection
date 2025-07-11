@@ -4,7 +4,7 @@ import { Square } from "lucide-react";
 interface Props {
   formattedDate: string;
 }
-const { formattedDate } = Astro.props;
+const { formattedDate } = Astro.props as Props;
 ---
 
 <div class="flex flex-row items-center">

@@ -7,14 +7,20 @@ import {
   CommandList,
 } from "@/components/ui/command";
 
-import { useCommandDialog } from "@/components/CommandDialogContext";
 import Fuse from "fuse.js";
 import { useEffect, useMemo, useState } from "react";
 import { categoryMeta } from "@/lib/categories";
 import type { GardenEntry } from "@/lib/types";
 
-export function SearchCommandDialog({ entries }: { entries: GardenEntry[] }) {
-  const { open, setOpen } = useCommandDialog();
+export function SearchCommandDialog({
+  entries,
+  open,
+  setOpen,
+}: {
+  entries: GardenEntry[];
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(entries);
 

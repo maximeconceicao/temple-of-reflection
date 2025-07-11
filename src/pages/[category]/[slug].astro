@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
 import Layout from "@/layouts/Layout.astro";
 import BreadcrumbNav from "@/components/BreadcrumbNav.astro";
+import type { GardenEntry } from "@/lib/types";
 
 export async function getStaticPaths() {
   const allPaths = await Promise.all(
@@ -21,7 +22,13 @@ export async function getStaticPaths() {
   return allPaths.flat();
 }
 
-const { entry, category, slug } = Astro.props;
+interface Props {
+  entry: GardenEntry;
+  category: GardenCategory;
+  slug: string;
+}
+
+const { entry, category, slug } = Astro.props as Props;
 const { Content, headings } = await entry.render();
 
 const Icon = categoryMeta[category].icon;

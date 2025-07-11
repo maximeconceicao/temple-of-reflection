@@ -1,9 +1,9 @@
 ---
-import AppShell from "@/components/AppShell";
+import AppShell from "@/components/AppShell.astro";
 import { allCategories, GardenCategory } from "@/lib/categories";
 import { getCollection } from "astro:content";
 import "../styles/global.css";
-const { title, toc, category } = Astro.props;
+const { title } = Astro.props as { title: string };
 
 const allEntriesArrays = await Promise.all(
   allCategories.map((category) => getCollection(category))
@@ -69,13 +69,7 @@ categories.sort((a, b) => b.count - a.count);
   </head>
   <body>
     <main class="flex min-h-screen">
-      <AppShell
-        client:load
-        entries={allEntries}
-        categories={categories}
-        toc={toc}
-        category={category}
-      >
+      <AppShell client:load entries={allEntries} categories={categories}>
         <slot />
       </AppShell>
     </main>

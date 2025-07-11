@@ -1,0 +1,19 @@
+---
+import BottomNav from "./BottomNav.astro";
+import type { CategoryCount } from "@/lib/categories";
+import type { GardenEntry } from "@/lib/types";
+
+interface Props {
+  entries: GardenEntry[];
+  categories: CategoryCount[];
+}
+
+const { entries, categories } = Astro.props as Props;
+---
+
+<main class="flex-1 pt-24 px-8 xl:px-0 max-w-3xl mx-auto mb-24">
+  <slot />
+</main>
+<div class="h-20">
+  <BottomNav categories={categories} entries={entries} />
+</div>

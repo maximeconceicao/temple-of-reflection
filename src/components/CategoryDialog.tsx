@@ -7,8 +7,13 @@ import {
 } from "@/components/ui/dialog";
 import { List } from "lucide-react";
 import { CategoryList } from "./CategoryList";
+import type { CategoryCount } from "@/lib/categories";
 
-export function CategoryDialog({ categories }) {
+export function CategoryDialog({
+  categories,
+}: {
+  categories: CategoryCount[];
+}) {
   return (
     <Dialog>
       <DialogTrigger asChild>
