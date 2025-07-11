@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import "@/styles/global.css";
 // Component Imports
 import Layout from "@/layouts/Layout.astro";
 
@@ -14,12 +14,12 @@ import Layout from "@/layouts/Layout.astro";
         <span class="text-primary">Temple</span> Of Reflection
       </h2>
       <img
-        src="/images/temple-light.png"
+        src={`${import.meta.env.BASE_URL}/images/temple-light.png`}
         alt="Temple en journée"
         class="block dark:hidden w-full h-auto rounded-md my-7"
       />
       <img
-        src="/images/temple-dark.png"
+        src={`${import.meta.env.BASE_URL}/images/temple-dark.png`}
         alt="Temple de nuit"
         class="hidden dark:block w-full h-auto rounded-md my-7"
       />
