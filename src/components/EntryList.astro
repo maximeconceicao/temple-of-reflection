@@ -3,6 +3,8 @@ import { categoryMeta, GardenCategory } from "@/lib/categories";
 import EntryTypeBadge from "./EntryTypeBadge.astro";
 import EntryDate from "./EntryDate.astro";
 import type { GardenEntry } from "@/lib/types";
+import { Sticker } from "lucide-react";
+
 
 interface Props {
   category: GardenCategory;
@@ -26,6 +28,8 @@ const entriesSorted = entries.sort((a, b) => {
     <span>/TITRE</span>
     <span>/TYPE</span>
   </div>
+
+  {entries.length === 0 && <div class="flex flex-col items-center my-8 text-center"><Sticker/><p class="my-2">Aucune note ici pour le moment.</p></div>}
 
   {
     entriesSorted.map((entry) => {
