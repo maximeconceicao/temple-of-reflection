@@ -24,8 +24,6 @@ export function SearchCommandDialog({
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(entries);
 
-  console.log("entries", entries);
-
   const fuse = useMemo(() => {
     return new Fuse(entries, {
       keys: ["data.title", "data.category"],

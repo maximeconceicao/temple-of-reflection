@@ -2,10 +2,11 @@
 import { categoryMeta, GardenCategory } from "@/lib/categories";
 import EntryTypeBadge from "./EntryTypeBadge.astro";
 import EntryDate from "./EntryDate.astro";
+import type { GardenEntry } from "@/lib/types";
 
 interface Props {
   category: GardenCategory;
-  entries: Awaited<ReturnType<typeof import("astro:content").getCollection>>;
+  entries: GardenEntry[];
 }
 
 const { category, entries } = Astro.props as Props;

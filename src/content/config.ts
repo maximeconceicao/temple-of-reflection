@@ -12,6 +12,7 @@ const schema = z.object({
   updatedDate: z.coerce.date().optional(),
   heroImageLight: z.string().optional(),
   heroImageDark: z.string().optional(),
+  draft: z.boolean().optional().default(false),
 });
 
 export const collections = Object.fromEntries(

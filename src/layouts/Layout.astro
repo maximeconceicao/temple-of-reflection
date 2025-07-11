@@ -9,10 +9,13 @@ const allEntriesArrays = await Promise.all(
   allCategories.map((category) => getCollection(category))
 );
 
-const allEntries = allEntriesArrays.flat();
+const publishedEntries = allEntriesArrays
+  .flat()
+  .filter((entry) => !entry.data.draft);
 const categories = Object.values(GardenCategory).map((category) => ({
   category,
-  count: allEntries.filter((entry) => entry.data.category === category).length,
+  count: publishedEntries.filter((entry) => entry.data.category === category)
+    .length,
 }));
 
 categories.sort((a, b) => b.count - a.count);
@@ -69,7 +72,7 @@ categories.sort((a, b) => b.count - a.count);
   </head>
   <body>
     <main class="flex min-h-screen">
-      <AppShell client:load entries={allEntries} categories={categories}>
+      <AppShell client:load entries={publishedEntries} categories={categories}>
         <slot />
       </AppShell>
     </main>

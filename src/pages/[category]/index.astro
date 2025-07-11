@@ -1,15 +1,9 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { getCollection } from "astro:content";
-import {
-  allCategories,
-  categoryMeta,
-  typeMeta,
-  GardenCategory,
-} from "@/lib/categories";
 import BreadcrumbNav from "@/components/BreadcrumbNav.astro";
-import { Square } from "lucide-react";
 import EntryList from "@/components/EntryList.astro";
+import Layout from "@/layouts/Layout.astro";
+import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   return allCategories.map((category) => ({
@@ -24,6 +18,7 @@ if (!allCategories.includes(category)) {
 }
 
 const entries = await getCollection(category);
+const publishedEntries = entries.filter((entry) => !entry.data.draft);
 
 // const groupedByType = entries.reduce(
 //   (acc: Record<string, typeof entries>, entry) => {
@@ -35,7 +30,7 @@ const entries = await getCollection(category);
 //   {}
 // );
 
-const entriesSorted = entries.sort((a, b) => {
+const entriesSorted = publishedEntries.sort((a, b) => {
   const dateA = new Date(a.data.pubDate);
   const dateB = new Date(b.data.pubDate);
   return dateB.getTime() - dateA.getTime();
@@ -65,7 +60,7 @@ const Icon = categoryMeta[category].icon;
           />
         </section>
 
-        <EntryList category={category} entries={entries} />
+        <EntryList category={category} entries={publishedEntries} />
       </main>
     )
   }

@@ -9,11 +9,12 @@ interface Props {
 }
 
 const { entries, categories } = Astro.props as Props;
+const publishedEntries = entries.filter((entry) => !entry.data.draft);
 ---
 
 <main class="flex-1 pt-24 px-8 xl:px-0 max-w-3xl mx-auto mb-24">
   <slot />
 </main>
 <div class="h-20">
-  <BottomNav categories={categories} entries={entries} />
+  <BottomNav categories={categories} entries={publishedEntries} />
 </div>
