@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-import { SearchCommandDialog } from "./SearchCommandDialog";
+import { SearchCommandDialog } from "@/components/SearchCommandDialog";
 import { useEffect, useState } from "react";
 import type { GardenEntry } from "@/lib/types";
 

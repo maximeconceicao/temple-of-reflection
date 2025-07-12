@@ -54,7 +54,9 @@ export function SearchCommandDialog({
               key={note.slug}
               onSelect={() => {
                 setOpen(false);
-                window.location.href = `/${note.data.category}/${note.slug}`;
+                window.location.href = `${import.meta.env.BASE_URL}${
+                  note.data.category
+                }/${note.slug}`;
               }}
             >
               <span>{note.data.title}</span>

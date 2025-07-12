@@ -24,7 +24,7 @@ export function CategoryList({
         return (
           <li key={category}>
             <a
-              href={`/${category}`}
+              href={`${import.meta.env.BASE_URL}${category}`}
               className="center inline-flex items-center gap-2 py-1 text-sm"
             >
               <Icon className="w-4 h-4" style={{ stroke: `var(--${color})` }} />

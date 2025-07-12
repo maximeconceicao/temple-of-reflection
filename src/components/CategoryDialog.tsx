@@ -6,7 +6,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { List } from "lucide-react";
-import { CategoryList } from "./CategoryList";
+import { CategoryList } from "@/components/CategoryList";
 import type { CategoryCount } from "@/lib/categories";
 
 export function CategoryDialog({

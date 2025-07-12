@@ -46,9 +46,9 @@ const Icon = categoryMeta[category].icon;
     <section class="mt-4 mb-8">
       <BreadcrumbNav
         items={[
-          { label: "Home", href: "/" },
-          { label: categoryMeta[category].label, href: `/${category}` },
-          { label: entry.data.title, href: `/${category}/${slug}` },
+          { label: "Home", href: import.meta.env.BASE_URL },
+          { label: categoryMeta[category].label, href: `${import.meta.env.BASE_URL}${category}` },
+          { label: entry.data.title, href: `${import.meta.env.BASE_URL}${category}/${slug}` },
         ]}
       />
     </section>
@@ -56,12 +56,12 @@ const Icon = categoryMeta[category].icon;
       {
         entry.data.heroImageDark && entry.data.heroImageLight && (
           <img
-        src={entry.data.heroImageLight}
+        src={import.meta.env.BASE_URL + entry.data.heroImageLight}
         alt=""
         class="block dark:hidden w-full h-auto rounded-md my-7"
       />
       <img
-        src={entry.data.heroImageDark}
+        src={import.meta.env.BASE_URL + entry.data.heroImageDark}
         alt=""
         class="hidden dark:block w-full h-auto rounded-md my-7"
       />

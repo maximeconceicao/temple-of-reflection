@@ -2,7 +2,7 @@
 import AppShell from "@/components/AppShell.astro";
 import { allCategories, GardenCategory } from "@/lib/categories";
 import { getCollection } from "astro:content";
-import "../styles/global.css";
+import "@/styles/global.css";
 const { title } = Astro.props as { title: string };
 
 const allEntriesArrays = await Promise.all(
@@ -53,20 +53,37 @@ categories.sort((a, b) => b.count - a.count);
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="/android-chrome-192x192.png"
+      href={`${import.meta.env.BASE_URL}android-chrome-192x192.png`}
     />
     <link
       rel="icon"
       type="image/png"
       sizes="512x512"
-      href="/android-chrome-512x512.png"
+      href={`${import.meta.env.BASE_URL}android-chrome-512x512.png`}
     />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href={`${import.meta.env.BASE_URL}favicon-32x32.png`}
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href={`${import.meta.env.BASE_URL}favicon-16x16.png`}
+    />
+    <link rel="shortcut icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href={`${import.meta.env.BASE_URL}apple-touch-icon.png`}
+    />
+    <link
+      rel="manifest"
+      href={`${import.meta.env.BASE_URL}manifest.webmanifest`}
+    />
 
     <title>{title}</title>
   </head>

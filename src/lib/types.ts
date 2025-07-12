@@ -1,5 +1,5 @@
 import type { CollectionEntry } from "astro:content";
-import type { GardenCategory } from "./categories";
+import type { GardenCategory } from "@/lib/categories";
 
 export type TocItem = {
   depth: number;
