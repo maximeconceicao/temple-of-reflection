@@ -16,6 +16,7 @@ This site is not a blog in the traditional sense—it's a living archive that gr
 ## 🛠️ Stack
 
 - [Astro](https://astro.build/)
+- [React](https://react.dev/)
 - [Markdown](https://www.markdownguide.org/)
 - [GitHub Pages](https://pages.github.com/) for deployment
 
