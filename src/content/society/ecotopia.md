@@ -12,9 +12,7 @@ heroImageLight: "/images/society/ecotopia-light.png"
 heroImageDark: "/images/society/ecotopia-dark.png"
 ---
 
-> **Dans la nature, aucune substance n'est synthétisée si sa dégradation n'est pas assurée. Le recyclage est donc la règle.**
-
-_- Barry Commoner_
+> _L'homme est fait pour s'insérer modestement dans un réseau continu et stable d'organismes vivants._
 
 ## 🗂 Informations Générales
 
@@ -43,8 +41,6 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 ## 🔑 Points Clés
 
 ### 🌱 1. **Écologie et rapport à la nature**
-
-> _L'homme est fait pour s'insérer modestement dans un réseau continu et stable d'organismes vivants._
 
 - Agriculture urbaine, permaculture et circuits courts favorisés.
 - Exploitation forestière lente, durable et régénérative.

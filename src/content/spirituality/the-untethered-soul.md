@@ -14,8 +14,6 @@ heroImageDark: "/images/spirituality/the-untethered-soul-dark.png"
 
 > **Tu n'es pas la voix dans ta tête. Tu es celui qui l'entend.**
 
-_- Michael A. Singer_
-
 ## 🗂 Informations Générales
 
 - **Titre original** : _The Untethered Soul_
