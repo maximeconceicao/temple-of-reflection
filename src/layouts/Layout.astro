@@ -3,6 +3,7 @@ import AppShell from "@/components/AppShell.astro";
 import { allCategories, GardenCategory } from "@/lib/categories";
 import { getCollection } from "astro:content";
 import "@/styles/global.css";
+import { isMainNote } from "@/lib/utils";
 const { title } = Astro.props as { title: string };
 
 const allEntriesArrays = await Promise.all(
@@ -14,8 +15,9 @@ const publishedEntries = allEntriesArrays
   .filter((entry) => !entry.data.draft);
 const categories = Object.values(GardenCategory).map((category) => ({
   category,
-  count: publishedEntries.filter((entry) => entry.data.category === category)
-    .length,
+  count: publishedEntries.filter(
+    (entry) => entry.data.category === category && isMainNote(entry.slug)
+  ).length,
 }));
 
 categories.sort((a, b) => b.count - a.count);

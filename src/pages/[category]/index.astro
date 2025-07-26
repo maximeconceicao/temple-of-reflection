@@ -1,8 +1,9 @@
 ---
-import BreadcrumbNav from "@/components/BreadcrumbNav.astro";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import EntryList from "@/components/EntryList.astro";
 import Layout from "@/layouts/Layout.astro";
 import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
+import { isMainNote } from "@/lib/utils";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -18,7 +19,10 @@ if (!allCategories.includes(category)) {
 }
 
 const entries = await getCollection(category);
-const publishedEntries = entries.filter((entry) => !entry.data.draft);
+
+const publishedEntries = entries
+  .filter((entry) => !entry.data.draft)
+  .filter((entry) => isMainNote(entry.slug));
 
 // const groupedByType = entries.reduce(
 //   (acc: Record<string, typeof entries>, entry) => {
@@ -52,7 +56,8 @@ const Icon = categoryMeta[category].icon;
         </section>
 
         <section class="mt-4 mb-8">
-          <BreadcrumbNav
+          <Breadcrumbs
+            client:load
             items={[
               { label: "Home", href: import.meta.env.BASE_URL },
               {

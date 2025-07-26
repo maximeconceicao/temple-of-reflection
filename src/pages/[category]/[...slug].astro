@@ -2,8 +2,8 @@
 import { getCollection } from "astro:content";
 import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
 import Layout from "@/layouts/Layout.astro";
-import BreadcrumbNav from "@/components/BreadcrumbNav.astro";
 import type { GardenEntry } from "@/lib/types";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export async function getStaticPaths() {
   const allPaths = await Promise.all(
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
           category,
           slug: entry.slug,
         },
-        props: { entry, category, slug: entry.slug }, // <- ici
+        props: { entry, category, slug: entry.slug }, 
       }));
     })
   );
@@ -32,6 +32,20 @@ const { entry, category, slug } = Astro.props as Props;
 const { Content, headings } = await entry.render();
 
 const Icon = categoryMeta[category].icon;
+
+const baseUrl = import.meta.env.BASE_URL
+
+const breadcrumbItems = [
+  { label: "Home", href: baseUrl },
+  { label: categoryMeta[category].label, href: `${baseUrl}${category}` },
+];
+// Construit les sous-chemins et labels à partir du slug
+let accumulatedPath = `${baseUrl}${category}`;
+slug.split("/").forEach((segment, index) => {
+  accumulatedPath += `/${segment}`;
+  const label = segment.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  breadcrumbItems.push({ label, href: accumulatedPath });
+});
 ---
 
 <Layout title={entry.data.title} toc={headings} category={category}>
@@ -44,24 +58,21 @@ const Icon = categoryMeta[category].icon;
       <h2 class="text-4xl font-semibold">{entry.data.title}</h2>
     </section>
     <section class="mt-4 mb-8">
-      <BreadcrumbNav
-        items={[
-          { label: "Home", href: import.meta.env.BASE_URL },
-          { label: categoryMeta[category].label, href: `${import.meta.env.BASE_URL}${category}` },
-          { label: entry.data.title, href: `${import.meta.env.BASE_URL}${category}/${slug}` },
-        ]}
+      <Breadcrumbs
+        client:load
+        items={breadcrumbItems}
       />
     </section>
     <div class="hero-image mt-7">
       {
         entry.data.heroImageDark && entry.data.heroImageLight && (
           <img
-        src={import.meta.env.BASE_URL + entry.data.heroImageLight}
+        src={baseUrl + entry.data.heroImageLight}
         alt=""
         class="block dark:hidden w-full h-auto rounded-md my-7"
       />
       <img
-        src={import.meta.env.BASE_URL + entry.data.heroImageDark}
+        src={baseUrl + entry.data.heroImageDark}
         alt=""
         class="hidden dark:block w-full h-auto rounded-md my-7"
       />
