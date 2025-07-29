@@ -8,8 +8,8 @@ categories:
   - bouddhisme
 pubDate: 2025-07-25
 description: "Guide de méditation"
-heroImageLight: "/images/spirituality/the-mind-illuminated-light.png"
-heroImageDark: "/images/spirituality/the-mind-illuminated-dark.png"
+heroImageLight: "/images/spirituality/the-mind-illuminated/the-mind-illuminated-light.png"
+heroImageDark: "/images/spirituality/the-mind-illuminated/the-mind-illuminated-dark.png"
 ---
 
 > _La méditation est une science, le processus systématique d'entraînement de l'esprit_
