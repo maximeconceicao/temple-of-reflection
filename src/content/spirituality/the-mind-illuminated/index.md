@@ -42,7 +42,7 @@ Le livre a été coécrit avec Matthew Immergut, sociologue, et Jeremy Graves, p
 
 ---
 
-## [⚠️ Idées reçues et pièges](/temple-of-reflection/spirituality/the-mind-illuminated/meditation-science-and-art)
+## ⚠️ Idées reçues et pièges
 
 ---
 
