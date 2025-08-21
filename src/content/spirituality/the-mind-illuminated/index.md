@@ -57,7 +57,7 @@ Le livre a été coécrit avec Matthew Immergut, sociologue, et Jeremy Graves, p
 ### 🟢 Débutant
 
 - [1️⃣ **Établir une routine**](/temple-of-reflection/spirituality/the-mind-illuminated/1-establishing-a-practice)
-- 2️⃣ **Attention interrompue** — surmonter l'errance mentale
+- [2️⃣ **Attention interrompue** — surmonter l'errance mentale](/temple-of-reflection/spirituality/the-mind-illuminated/2-interrupted-attention)
 - 3️⃣ **Attention prolongée** — surmonter l'oubli
 
 > 🏆 **Jalon 1** : Attention continue à l'objet de méditation
