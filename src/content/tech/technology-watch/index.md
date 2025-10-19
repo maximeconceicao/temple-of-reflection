@@ -27,6 +27,7 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 - [UI libraries & design systems](./ui-libraries.md)
 - [package.json & tooling](./frontend-tooling.md)
 - [Performance & accessibilité](./frontend-performance.md)
+- [Internationalisation (i18n)](./technology-watch/i18n/)
 
 ---
 
@@ -35,6 +36,7 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 - [NestJS](./nestjs.md)
 - [Node.js runtimes (Node, Bun, Deno)](./node-runtimes.md)
 - [Architecture & patterns (CQRS, Clean Arch…)](./backend-architecture.md)
+- [Authentification (JWT, SSO, OAuth…)](./auth.md)
 
 ---
 
