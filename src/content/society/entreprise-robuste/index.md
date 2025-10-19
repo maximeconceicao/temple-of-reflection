@@ -39,12 +39,8 @@ _L'Entreprise robuste_ propose une alternative au culte de la performance qui do
 
 ## 🔑 Points Clés
 
----
+## [🏢 7 examples d'organisations à visée robuste](/temple-of-reflection/society/entreprise-robuste/exemples)
 
-## Avis Personnel
+## [🐦‍🔥 Sémantique de la transformation](/temple-of-reflection/society/entreprise-robuste/transformation)
 
-#### ✅ **Les (+)**
-
-#### ❌ **Les (&minus;)**
-
-## Conclusion
+## [💡 12 pistes pour mettre le politique au centre du jeu de la robustesse](/temple-of-reflection/society/entreprise-robuste/pistes)
