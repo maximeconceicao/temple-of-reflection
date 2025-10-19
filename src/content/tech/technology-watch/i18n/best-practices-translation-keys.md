@@ -1,5 +1,5 @@
 ---
-title: "Bonnes pratiques - clé de traduction"
+title: "Bonnes pratiques - clés de traduction"
 category: "tech"
 type: "book"
 tags:

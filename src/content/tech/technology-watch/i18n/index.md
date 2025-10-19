@@ -21,6 +21,6 @@ Cette page centralise toutes mes notes liées à **l'internationalisation**.
 
 ## 📖 Notes
 
-- [10 best practices for translation keys](./best-practices-translation-keys)
+- [Bonnes pratiques - clés de traduction](./best-practices-translation-keys)
 
 ---
