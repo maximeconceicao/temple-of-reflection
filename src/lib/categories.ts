@@ -15,6 +15,8 @@ export enum GardenCategory {
 
 export enum GardenType {
   BOOK = "book",
+  NOTE = "note",
+  CHEAT_SHEET = "cheat-sheet",
 }
 
 export const allCategories = Object.values(GardenCategory);
@@ -41,6 +43,14 @@ export const typeMeta: Record<GardenType, { label: string; color: string }> = {
   [GardenType.BOOK]: {
     label: "Livre",
     color: "chart-1",
+  },
+  [GardenType.NOTE]: {
+    label: "Note",
+    color: "chart-3",
+  },
+  [GardenType.CHEAT_SHEET]: {
+    label: "Cheat Sheet",
+    color: "chart-5",
   },
 };
 

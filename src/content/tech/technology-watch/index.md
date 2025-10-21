@@ -27,7 +27,7 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 - [UI libraries & design systems](./ui-libraries.md)
 - [package.json & tooling](./frontend-tooling.md)
 - [Performance & accessibilité](./frontend-performance.md)
-- [Internationalisation (i18n)](./technology-watch/i18n/)
+- [Internationalisation (i18n)](/temple-of-reflection/tech/technology-watch/i18n/)
 
 ---
 
@@ -36,7 +36,7 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 - [NestJS](./nestjs.md)
 - [Node.js runtimes (Node, Bun, Deno)](./node-runtimes.md)
 - [Architecture & patterns (CQRS, Clean Arch…)](./backend-architecture.md)
-- [Authentification (JWT, SSO, OAuth…)](./technology-watch/auth/)
+- [Authentification (JWT, SSO, OAuth…)](/temple-of-reflection/tech/technology-watch/auth/)
 
 ---
 
@@ -67,7 +67,7 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 
 ## 🧰 Outils de développement
 
-- [Git](./git.md)
+- [Git Cheat Sheet](/temple-of-reflection/tech/technology-watch/git-cheat-sheet)
 - [VS Code](./vscode.md)
 - [Linters & formatters](./linters-formatters.md)
 - [Productivité (aliases, shell, tmux…)](./dev-productivity.md)
