@@ -36,7 +36,7 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 - [NestJS](./nestjs.md)
 - [Node.js runtimes (Node, Bun, Deno)](./node-runtimes.md)
 - [Architecture & patterns (CQRS, Clean Arch…)](./backend-architecture.md)
-- [Authentification (JWT, SSO, OAuth…)](./auth.md)
+- [Authentification (JWT, SSO, OAuth…)](./technology-watch/auth/)
 
 ---
 
