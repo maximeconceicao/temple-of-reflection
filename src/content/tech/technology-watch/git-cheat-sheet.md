@@ -17,6 +17,10 @@ draft: true
 
 ---
 
+## 📚 Ressources
+
+- [Oh Shit, Git!?!](https://ohshitgit.com/)
+
 ## 🔧 Personnalisation
 
 - **Configuration globale :**
@@ -167,16 +171,16 @@ draft: true
 
 ## 🔄 Fusion et rebase
 
-- **Fusionner la branche courante avec `master` ou `main` :**
+- **Fusionner la branche courante avec `main` :**
 ```bash
-  git checkout master
+  git checkout main
   git merge <your-branch>
 ```
 
-- **Mettre à jour votre branche avec `master` :**
+- **Mettre à jour votre branche avec `main` :**
 ```bash
   git checkout <your-branch>
-  git rebase master
+  git rebase main
 ```
 
 - **Annuler un rebase en cours :**
@@ -189,6 +193,11 @@ draft: true
   git rebase --continue
 ```
 
+- **Mettre à jour la branche distante après un rebase :**
+```bash
+  git push --force-with-lease
+```
+> 🧠 Git "vérifie le bail (lease)" : si quelqu'un a poussé depuis, la commande échoue au lieu d'écraser son travail.
 ---
 
 ## ⏪ Retour arrière et annulation
@@ -243,9 +252,9 @@ draft: true
   git remote add <remote-name> <url>
 ```
 
-- **Synchroniser la branche courante avec `master`/`main` :**
+- **Synchroniser la branche courante avec `main` :**
 ```bash
-  git push -u origin master
+  git push -u origin main
 ```
 
 - **Télécharger les modifications sans les fusionner :**
@@ -279,3 +288,93 @@ draft: true
 ```
 
 ---
+
+## 💾 Sauvegarde temporaire
+
+- **Mettre de côté les modifications en cours :**
+```bash
+  git stash
+```
+
+- **Lister les stashs existants :**
+```bash
+  git stash list
+```
+
+- **Appliquer le dernier stash sans le supprimer :**
+```bash
+  git stash apply
+```
+
+- **Appliquer et supprimer le dernier stash :**
+```bash
+  git stash pop
+```
+
+- **Supprimer un stash spécifique :**
+```bash
+  git stash drop stash@{1}
+```
+
+---
+
+## 🧭 Navigation et sécurité
+
+- **Afficher l'historique complet des mouvements du HEAD :**
+```bash
+  git reflog
+```
+🔹 `reflog` garde trace de tous les HEAD récents (commits, merges, resets…).
+🔹 Très utile pour retrouver un commit 'perdu' après un `reset --hard` ou un rebase.
+
+- **Revenir à un état précédent à partir du reflog :**
+```bash
+  git checkout HEAD@{2}
+```
+
+---
+
+## 📥 Récupérer un fichier depuis une autre branche
+
+- **Récupérer un fichier spécifique depuis main (sans fusionner toute la branche) :**
+```bash
+  git checkout main -- <chemin/vers/fichier>
+```
+>⚠️ Cette commande **remplace le fichier** courant par la version de `main`, mais ne touche pas au reste de ton travail.
+
+- **Récupérer plusieurs fichiers :**
+```bash
+  git checkout main -- <fichier1> <fichier2> <dossier/>
+```
+
+- **(Nouvelle syntaxe, recommandée depuis Git 2.23+)**
+```bash
+  git restore --source=main <chemin/vers/fichier>
+```
+> 💡 `git restore` est plus explicite et moderne que `git checkout` pour ce type d'opération.
+
+--- 
+
+## 🧹 Nettoyer les branches locales obsolètes
+
+- **Mettre à jour les références distantes :**
+```bash
+  git fetch -p
+```
+> L'option `-p` (ou `--prune`) supprime les références de branches distantes qui n'existent plus.
+
+- **Lister les branches locales n'existant plus sur le dépôt distant :**
+```bash
+  git branch -vv
+```
+> Les branches dont la ligne contient [gone] ne sont plus présentes sur le remote.
+> Exemple :
+```bash
+  feature/old-feature   1234abc [origin/old-feature: gone] Dernier commit
+```
+
+- **Supprimer toutes les branches locales "disparues" automatiquement :**
+```bash
+  git fetch -p
+  git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -d
+```
