@@ -324,8 +324,8 @@ draft: true
 ```bash
   git reflog
 ```
-🔹 `reflog` garde trace de tous les HEAD récents (commits, merges, resets…).
-🔹 Très utile pour retrouver un commit 'perdu' après un `reset --hard` ou un rebase.
+  - 🔹 `reflog` garde trace de tous les HEAD récents (commits, merges, resets…).
+  - 🔹 Très utile pour retrouver un commit 'perdu' après un `reset --hard` ou un rebase.
 
 - **Revenir à un état précédent à partir du reflog :**
 ```bash

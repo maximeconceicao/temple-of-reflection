@@ -68,6 +68,7 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 ## 🧰 Outils de développement
 
 - [Git Cheat Sheet](/temple-of-reflection/tech/technology-watch/git-cheat-sheet)
+- [GitLab](/temple-of-reflection/tech/technology-watch/gitlab)
 - [VS Code](./vscode.md)
 - [Linters & formatters](./linters-formatters.md)
 - [Productivité (aliases, shell, tmux…)](./dev-productivity.md)
