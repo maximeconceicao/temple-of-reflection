@@ -90,7 +90,7 @@ xxxxx.yyyyy.zzzzz
 6. ✅ Accès autorisé si tout est conforme
 
 ---
-## ⚖️ 6. Authentification vs Authorization
+## ⚖️ 6. Authentification vs Autorisation
 
 ### 🔑 Authentification (Authentication)
 
