@@ -22,3 +22,4 @@ Cette page centralise toutes mes notes liées aux sujets **d'authentification**.
 ## 📖 Notes
 
 - [Magic Link](./magic-link)
+- [JWT](./jwt)
