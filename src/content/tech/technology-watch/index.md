@@ -22,7 +22,7 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 
 ## 🎨 Frontend
 
-- [React](./technology-watch/react/index.md)
+- [React](/temple-of-reflection/tech/technology-watch/react/)
 - [State management](./state-management.md)
 - [UI libraries & design systems](./ui-libraries.md)
 - [package.json & tooling](./frontend-tooling.md)

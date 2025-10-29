@@ -32,7 +32,7 @@ Cette page centralise toutes mes notes, expérimentations et ressources liées �
 
 ## 🧩 Écosystème & outils
 
-- [React Router / navigation](./react-router.md)
+- [React Router](./react-router)
 - [React Query / TanStack](./react-query.md)
 - [State management externe (Zustand, Redux, Jotai…)](./react-state-management.md)
 - [Form management (React Hook Form, Formik…)](./react-forms.md)
