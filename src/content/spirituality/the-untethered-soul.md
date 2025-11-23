@@ -12,25 +12,28 @@ heroImageLight: "/images/spirituality/the-untethered-soul-light.png"
 heroImageDark: "/images/spirituality/the-untethered-soul-dark.png"
 ---
 
-> **Tu n'es pas la voix dans ta tête. Tu es celui qui l'entend.**
+> Tu n'es pas la voix dans ta tête. Tu es celui qui l'entend.
 
-## 🗂 Informations Générales
+## ℹ Informations Générales
 
-- **Titre original** : _The Untethered Soul_
-- **Auteur** : Michael A. Singer
-- **Année de publication** : 2007
-- **Catégories** : Développement personnel, Spiritualité
-- **Pages** : 320
+| 🌞                        | 🌛                                     |
+| ------------------------ | ------------------------------------- |
+| **Titre original**       | _The Untethered Soul_                 |
+| **Auteur**               | Michael A. Singer                     |
+| **Année de publication** | 2007                                  |
+| **Catégories**           | Développement personnel, Spiritualité |
+| **Pages**                | 320                                   |
+
 
 ---
 
 ## 📖 Résumé
 
-Dans _L'âme délivrée_, Michael A. Singer explore la nature de la conscience et montre comment nous pouvons prendre de la distance avec nos conditionnements mentaux pour accéder à une vie plus paisible et plus consciente. À travers une approche à la fois spirituelle et pragmatique, il invite le lecteur à observer la voix intérieure, à cesser de s'y identifier, et à découvrir une expérience plus vaste de soi, détachée des turbulences de l'esprit. L'objectif ultime étant de vivre dans un état d'ouverture permanente au moment présent, libéré des peurs et des résistances.
+Dans ___L'âme délivrée___, Michael A. Singer explore la nature de la conscience et montre comment nous pouvons prendre de la distance avec nos conditionnements mentaux pour accéder à une vie plus paisible et plus consciente. À travers une approche à la fois spirituelle et pragmatique, il invite le lecteur à observer la voix intérieure, à cesser de s'y identifier, et à découvrir une expérience plus vaste de soi, détachée des turbulences de l'esprit. L'objectif ultime étant de vivre dans un état d'ouverture permanente au moment présent, libéré des peurs et des résistances.
 
 ---
 
-## 👤 À propos de l'auteur
+## 🚶 À propos de l'auteur
 
 **Michael A. Singer** est un auteur, conférencier et entrepreneur américain, connu pour ses ouvrages sur la conscience, la méditation et la quête spirituelle. Alors qu'il poursuivait un doctorat en économie dans les années 1970, il vécut une transformation intérieure marquante qui l'orienta vers une pratique intensive du yoga et de la méditation. Il fonda ensuite le _Temple of the Universe_, un centre spirituel situé en Floride et ouvert à toutes les croyances. Parallèlement, il créa une entreprise de logiciels médicaux qui connut un grand succès. Dans son livre _The Surrender Experiment_, il retrace ce parcours singulier, guidé par le lâcher-prise et l'accueil inconditionnel des événements de la vie.
 
@@ -92,9 +95,9 @@ Dans _L'âme délivrée_, Michael A. Singer explore la nature de la conscience e
 
 ---
 
-### 6. ⚰️ La Mort — et la vie pleinement vécue
+### 6. 💀 La Mort — et la vie pleinement vécue
 
-_"Si vous vivez pleinement chacune de vos expériences, alors la mort de vous privera de rien. Il n'y a rien qu'on puisse vous enlever, car vous êtes déjà épanoui. C'est pourquoi le sage est toujours prêt à mourir. Cela ne fait aucune différence pour lui, car son expérience de la vie est déjà entièrement complète."_
+> Si vous vivez pleinement chacune de vos expériences, alors la mort de vous privera de rien. Il n'y a rien qu'on puisse vous enlever, car vous êtes déjà épanoui. C'est pourquoi le sage est toujours prêt à mourir. Cela ne fait aucune différence pour lui, car son expérience de la vie est déjà entièrement complète.
 
 - **La conscience ne meurt pas.** Ce que nous sommes profondément est au-delà du corps et du mental.
 - **Se rappeler de la mort donne de la clarté.** Cela relativise les problèmes du quotidien et recentre sur l'essentiel.
@@ -105,7 +108,7 @@ _"Si vous vivez pleinement chacune de vos expériences, alors la mort de vous pr
 
 ## Avis Personnel
 
-#### ✅ **Les (+)**
+#### 👍 Les (+)
 
 1. **Accessibilité du langage**  
    → Une écriture claire et simple, qui rend des idées spirituelles profondes compréhensibles même sans bagage philosophique ou religieux.
@@ -118,7 +121,7 @@ _"Si vous vivez pleinement chacune de vos expériences, alors la mort de vous pr
 4. **Un impact transformateur pour de nombreux lecteurs**  
    → Beaucoup témoignent d'un vrai changement dans leur rapport au mental, au stress et à la souffrance, faisant de ce livre une véritable expérience intérieure.
 
-#### ❌ **Les (&minus;)**
+#### 👎 Les (&minus;)
 
 1. **Manque de structure**<br>
    → Les thèmes principaux se distinguent bien, mais la progression n'est pas si claire et peut donner l'impression que les idées reviennent en boucle.

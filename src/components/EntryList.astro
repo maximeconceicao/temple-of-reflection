@@ -40,7 +40,7 @@ const entriesSorted = entries.sort((a, b) => {
           <EntryDate formattedDate={formattedDate} />
           <a
             href={`${import.meta.env.BASE_URL}${category}/${entry.slug}`}
-            class="hover:underline text-lg"
+            class="hover:underline text-md"
             style={{ color: `var(--${categoryMeta[category].color})` }}
           >
             {entry.data.title}

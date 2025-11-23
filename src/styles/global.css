@@ -50,7 +50,7 @@
   --background: oklch(0.975 0.02 85); /* lumière chaude */
   --foreground: oklch(0.25 0.02 275); /* gris bleu foncé */
 
-  --card: oklch(0.97 0.015 85);
+  --card: oklch(0.93 0.015 85);
   --card-foreground: oklch(0.25 0.02 275);
 
   --popover: oklch(0.97 0.015 85);
@@ -141,23 +141,89 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "NotoEmoji";
+  src: url("/temple-of-reflection/fonts/NotoEmoji-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/temple-of-reflection/fonts/IBMPlexMono/IBMPlexMono-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/temple-of-reflection/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/temple-of-reflection/fonts/IBMPlexMono/IBMPlexMono-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/temple-of-reflection/fonts/IBMPlexMono/IBMPlexMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    font-family: "Inconsolata", sans-serif;
+    font-family: "IBMPlexMono", "NotoEmoji", sans-serif;
     @apply bg-background text-foreground;
   }
 }
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "FreshAlmond", sans-serif;
-  color: rgb(var(--black));
-  line-height: 1.2;
-} */
+@layer components {
+  .prose-custom {
+    @apply prose dark:prose-invert;
+  }
+    /* ---- CUSTOM MD STYLES ---- */
+  .prose-custom h1,
+  .prose-custom h2{
+    @apply font-medium;
+  }
+
+  .prose-custom h3,
+  .prose-custom h4,
+  .prose-custom h5,
+  .prose-custom h6{
+    @apply font-medium;
+  }
+
+  .prose-custom p, .prose-custom li {
+  @apply text-sm
+  }
+
+  .prose-custom strong {
+    @apply font-semibold;
+    color: var(--category-color);
+}
+
+.prose-custom blockquote {
+  @apply rounded-lg px-4 py-2 border-l-4;
+  border-color: var(--category-color);
+  background-color: var(--card);
+  color: rgb(var(--foreground));
+  margin: 1em 0;
+}
+
+  
+}
+
+

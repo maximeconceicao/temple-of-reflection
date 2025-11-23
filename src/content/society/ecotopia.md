@@ -14,13 +14,15 @@ heroImageDark: "/images/society/ecotopia-dark.png"
 
 > _L'homme est fait pour s'insérer modestement dans un réseau continu et stable d'organismes vivants._
 
-## 🗂 Informations Générales
+## ℹ Informations Générales
 
-- **Titre original** : _Ecotopia: The Notebooks and Reports of William Weston_
-- **Auteur** : Ernest Callenbach
-- **Année de publication** : 1975
-- **Catégories** : Roman, Écologie, Utopie
-- **Pages** : 336
+| 🌞                        | 🌛                                                       |
+| ------------------------ | ------------------------------------------------------- |
+| **Titre original**       | _Ecotopia: The Notebooks and Reports of William Weston_ |
+| **Auteur**               | Ernest Callenbach                                       |
+| **Année de publication** | 1975                                                    |
+| **Catégories**           | Roman, Écologie, Utopie                                 |
+| **Pages**                | 336                                                     |
 
 ---
 
@@ -32,7 +34,7 @@ Publié en 1975, _Ecotopia_ imagine une société écologiste fondée par la Cal
 
 ---
 
-## 👤 À propos de l'auteur
+## 🚶 À propos de l'auteur
 
 Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma américain, partisan de la simplicité volontaire et passionné par l'écologie, la technologie et les alternatives sociétales. Diplômé de l'université de Chicago, il a longtemps travaillé à l'Université de Californie, où il a édité des publications sur la culture et l'environnement. _Ecotopia_, son œuvre la plus célèbre, est née de son engagement pour une société durable et a marqué des générations de lecteurs par sa vision d'une civilisation écocentrée. Militant sans être dogmatique, Callenbach croyait en la possibilité de changement à travers l'imagination collective.
 
@@ -40,7 +42,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ## 🔑 Points Clés
 
-### 🌱 1. **Écologie et rapport à la nature**
+### 🌱 1. Écologie et rapport à la nature
 
 - Agriculture urbaine, permaculture et circuits courts favorisés.
 - Exploitation forestière lente, durable et régénérative.
@@ -54,7 +56,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 🏛 2. **Organisation politique**
+### 🏛 2. Organisation politique
 
 > _Ils sont convaincus que la réorganisation de leurs cités en constellations de mini-villes et la dispersion continue des citadins dans les campagnes assureront l'amélioration de leurs conditions de vie._
 
@@ -66,24 +68,29 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 🛠 3. **Économie et travail**
+### 🛠 3. Économie et travail
 
 > _On ne peut même pas dire si un Écotopien est en train de travailler ou s'il se livre à ses loisirs._
 
-- Économie mixte fondée sur des coopératives, structures communautaires et entreprises privées (ex: système scolaire).
+#### ◾ Organisation économique
+- Économie mixte fondée sur des coopératives, structures communautaires et entreprises privées.
 - Rejet du capitalisme extractif et spéculatif : priorité aux besoins humains et écologiques.
 - Accès gratuit ou mutualisé à l'éducation, la santé, les transports, l'énergie de base.
+
+#### ◾ Monnaie et travail
 - Monnaie locale pour renforcer les circuits économiques internes.
 - Forte réduction des inégalités économiques.
 - Revalorisation du travail manuel, artisanal et créatif.
 - Travail vu comme épanouissement personnel et contribution sociale.
 - Semaine de travail courte (environ 20h), organisation souple, congés fréquents.
+
+#### ◾ Production et décroissance
 - Décroissance choisie : ralentissement de la production au profit du bien-être.
 - Démantèlement de l'industrie lourde héritée de l'ancien monde, reconversion des infrastructures vers des usages écologiques ou collectifs.
 
 ---
 
-### 🧠 4. **Éducation et culture**
+### 🧠 4. Éducation et culture
 
 > _En tout cas, les Écotopiens semblent se servir de la télé plutôt que de la laisser se servir d'eux._
 
@@ -95,7 +102,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### ❤️ 5. **Relations humaines, émotions et sexualité**
+### 💟 5. Relations humaines, émotions et sexualité
 
 > _Un médecin m'a confié que les Écotopiens ont le sentiment de 'ne jamais être seul'._
 
@@ -109,7 +116,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 🩺 6. **Santé et bien-être**
+### 💊 6. Santé et bien-être
 
 > _Ils s'étirent, changent de position, font de mystérieux exercices proches du yoga, et semblent jouir avec intensité de leur corps._
 
@@ -122,7 +129,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 🚋 7. **Mobilité et urbanisme**
+### 🚋 7. Mobilité et urbanisme
 
 > _Les rues sont à peine assez larges pour que deux véhicules puissent s'y croiser ; mais comme il n'y a pas de voiture, ce n'est pas un problème._
 
@@ -135,7 +142,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 🌍 8. **Relations internationales**
+### 🌍 8. Relations internationales
 
 - _Isolation temporaire_ lors de la fondation pour protéger leur expérience sociale.
 - Diplomatie pacifique et non-interventionniste : neutralité assumée.
@@ -147,7 +154,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### ⚙️ 9. **Optimisation, modularité et innovation sobre**
+### 🤖 9. Optimisation, modularité et innovation sobre
 
 > _De manière mystérieuse, les Écotopiens ne se sentent pas 'séparés' de leur technologie. Leur attitude rappelle un peu celle des Indiens : le cheval, le tipi, l'arc et les flèches sont tous sortis, comme les êtres humains, au sein de la nature, et ils entretiennent avec elle un lien organique._
 
@@ -163,7 +170,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 👕 10. **Vêtements et apparence**
+### 👕 10. Vêtements et apparence
 
 > _J'ai déjà remarqué dans le train que les Écotopiens portent volontiers des vêtements très amples, dont les couleurs vives essaient de compenser le manque d'élégance et la coupe approximative._
 
@@ -176,7 +183,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 💎 11. **Valeur et rapport aux objets**
+### 💎 11. Valeur et rapport aux objets
 
 > _Une loi impose aujourd'hui de soumettre tous les prototypes de nouveaux objets à un jury de dix citoyens. L'autorisation de fabriquer tel ou tel produit est seulement accordée si tous les jurés peuvent réparer les pannes probables avec des outils de base._
 
@@ -190,7 +197,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 🌀 12. **Spiritualité laïque et rapport au sacré**
+### 🌀 12. Spiritualité laïque et rapport au sacré
 
 > Soleil, ici nous t'avons vu sombrer<br>
 > Comme si c'était la dernière fois.<br>
@@ -204,7 +211,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 🧾 13. **Mémoire, histoire et critique du passé**
+### 🧾 13. Mémoire, histoire et critique du passé
 
 - La société écotopienne ne renie pas le passé, mais elle le **critique activement** (pollution, guerre, consumérisme).
 - Musées, films, œuvres d'art montrent la **décadence** du monde ancien comme un **contre-exemple** pédagogique.
@@ -212,9 +219,9 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-### 🤝 14. **Temporalité, rythme et disponibilité**
+### 🤝 14. Temporalité, rythme et disponibilité
 
-> \*L'heure qu'il est ne les préoccupe guère, ai-je remarqué : peu d'entre eux portent une montre, ils accordent plus d'attention à des phénomènes naturels comme le lever ou le coucher du soleil, ou encore les marées, qu'à l'heure précise."
+> L'heure qu'il est ne les préoccupe guère, ai-je remarqué : peu d'entre eux portent une montre, ils accordent plus d'attention à des phénomènes naturels comme le lever ou le coucher du soleil, ou encore les marées, qu'à l'heure précise.
 
 - Le **temps n'est plus une ressource à exploiter**, mais un **espace à habiter** : lenteur, attention, écoute.
 - La société rejette la **pression de la productivité** au profit de **temps de repos, de silence, de création libre**.
@@ -225,7 +232,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ## Avis Personnel
 
-#### ✅ **Les (+)**
+#### 👍 Les (+)
 
 1. **Vision écologiste avant-gardiste**  
    → Une anticipation lucide des enjeux environnementaux, bien avant leur mise en débat public à grande échelle.
@@ -247,7 +254,7 @@ Ernest Callenbach (1929-2012) était un écrivain, éditeur, critique de cinéma
 
 ---
 
-#### ❌ **Les (&minus;)**
+#### 👎 Les (&minus;)
 
 1. **Caractère idéalisé et peu réaliste de l'utopie**
    → La société écotopienne semble fonctionner sans conflits majeurs, ce qui peut rendre le tout artificiel ou naïf.

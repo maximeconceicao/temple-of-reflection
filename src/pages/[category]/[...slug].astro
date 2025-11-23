@@ -55,7 +55,7 @@ slug.split("/").forEach((segment, index) => {
             className="w-10 h-10"
             style={{ stroke: `var(--${categoryMeta[category].color})` }}
           />
-      <h2 class="text-4xl font-semibold">{entry.data.title}</h2>
+      <h2 class="text-3xl font-medium">{entry.data.title}</h2>
     </section>
     <section class="mt-4 mb-8">
       <Breadcrumbs
@@ -79,7 +79,7 @@ slug.split("/").forEach((segment, index) => {
         )
       }
     </div>
-    <div class="prose dark:prose-invert max-w-none w-full">
+    <div class="prose-custom max-w-none w-full" style={`--category-color: var(--${categoryMeta[category].color});`}>
       <Content />
     </div>
   </article>
