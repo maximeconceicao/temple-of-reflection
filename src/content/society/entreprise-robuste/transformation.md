@@ -10,7 +10,6 @@ pubDate: 2025-10-05
 description: "Une alternative au culte de la performance"
 heroImageLight: "/images/spirituality/the-untethered-soul-light.png"
 heroImageDark: "/images/spirituality/the-untethered-soul-dark.png"
-draft: true
 ---
 
 ## 🐦‍🔥 Sémantique de la transformation
