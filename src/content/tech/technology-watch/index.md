@@ -23,45 +23,45 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 ## 🎨 Frontend
 
 - [React](/temple-of-reflection/tech/technology-watch/react/)
-- [State management](./state-management.md)
-- [UI libraries & design systems](./ui-libraries.md)
-- [package.json & tooling](./frontend-tooling.md)
-- [Performance & accessibilité](./frontend-performance.md)
+- State management
+- UI libraries & design systems
+- package.json & tooling
+- Performance & accessibilité
 - [Internationalisation (i18n)](/temple-of-reflection/tech/technology-watch/i18n/)
 
 ---
 
 ## ⚙️ Backend
 
-- [NestJS](./nestjs.md)
-- [Node.js runtimes (Node, Bun, Deno)](./node-runtimes.md)
-- [Architecture & patterns (CQRS, Clean Arch…)](./backend-architecture.md)
+- NestJS
+- Node.js runtimes (Node, Bun, Deno)
+- Architecture & patterns (CQRS, Clean Arch…)
 - [Authentification (JWT, SSO, OAuth…)](/temple-of-reflection/tech/technology-watch/auth/)
 
 ---
 
 ## 🗄️ ORM & Base de données
 
-- [Prisma](./prisma.md)
-- [PostgreSQL](./postgresql.md)
-- [SQL avancé (index, CTE, JSONB…)](./advanced-sql.md)
-- [Alternatives (Drizzle, TypeORM…)](./orm-alternatives.md)
+- Prisma
+- PostgreSQL
+- SQL avancé (index, CTE, JSONB…)
+- Alternatives (Drizzle, TypeORM…)
 
 ---
 
 ## 🤖 Intelligence artificielle & outils associés
 
-- [IA côté dev (copilot, agents, intégrations)](./dev-ai.md)
-- [Postgres + IA (pgvector, embeddings)](./pgvector.md)
-- [Use cases backend + IA](./backend-ai.md)
+- IA côté dev (copilot, agents, intégrations)
+- Postgres + IA (pgvector, embeddings)
+- Use cases backend + IA
 
 ---
 
 ## 🧩 Monorepos & organisation du code
 
-- [Turborepo](./turborepo.md)
-- [Nx](./nx.md)
-- [Gestion des packages partagés](./monorepo-patterns.md)
+- Turborepo
+- Nx
+- Gestion des packages partagés
 
 ---
 
@@ -69,25 +69,25 @@ Chaque lien pointe vers une note ou un hub dédié (existante ou à créer).
 
 - [Git Cheat Sheet](/temple-of-reflection/tech/technology-watch/git-cheat-sheet)
 - [GitLab](/temple-of-reflection/tech/technology-watch/gitlab)
-- [VS Code](./vscode.md)
-- [Linters & formatters](./linters-formatters.md)
-- [Productivité (aliases, shell, tmux…)](./dev-productivity.md)
+- VS Code
+- Linters & formatters
+- Productivité (aliases, shell, tmux…)
 
 ---
 
 ## 🔧 DevOps & Infrastructure
 
-- [Docker & containers](./docker.md)
-- [CI/CD (GitHub Actions, pipelines)](./ci-cd.md)
-- [Observabilité (logs, monitoring)](./observability.md)
+- Docker & containers
+- CI/CD (GitHub Actions, pipelines)
+- Observabilité (logs, monitoring)
 
 ---
 
 ## 📚 Bonnes pratiques & architecture logicielle
 
-- [Domain-Driven Design](./ddd.md)
-- [Clean Architecture](./clean-architecture.md)
-- [Security best practices](./security.md)
+- Domain-Driven Design
+- Clean Architecture
+- Security best practices
 
 ---
 
