@@ -10,6 +10,7 @@ pubDate: 2026-02-21
 description: ""
 heroImageLight: "/images/spirituality/the-untethered-soul-light.png"
 heroImageDark: "/images/spirituality/the-untethered-soul-dark.png"
+draft: true
 ---
 
 > Tu n'es pas la voix dans ta tête. Tu es celui qui l'entend.
