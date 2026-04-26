@@ -39,19 +39,10 @@ export const categoryMeta: Record<
   [GardenCategory.TECH]: { label: "Tech", icon: Binary, color: "chart-2" },
 };
 
-export const typeMeta: Record<GardenType, { label: string; color: string }> = {
-  [GardenType.BOOK]: {
-    label: "Livre",
-    color: "chart-1",
-  },
-  [GardenType.NOTE]: {
-    label: "Note",
-    color: "chart-3",
-  },
-  [GardenType.CHEAT_SHEET]: {
-    label: "Cheat Sheet",
-    color: "chart-5",
-  },
+export const typeMeta: Record<GardenType, { label: string }> = {
+  [GardenType.BOOK]: { label: "Livre" },
+  [GardenType.NOTE]: { label: "Note" },
+  [GardenType.CHEAT_SHEET]: { label: "Cheat Sheet" },
 };
 
 export type CategoryCount = {

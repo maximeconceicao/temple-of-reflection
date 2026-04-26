@@ -1,5 +1,5 @@
 ---
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import { Breadcrumbs } from "@/components/Breadcrumbs.tsx";
 import EntryList from "@/components/EntryList.astro";
 import Layout from "@/layouts/Layout.astro";
 import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
@@ -38,6 +38,7 @@ const Icon = categoryMeta[category].icon;
 
   <section class="mt-4 mb-8">
     <Breadcrumbs
+      client:load
       items={[
         { label: "Home", href: buildUrl() },
         {

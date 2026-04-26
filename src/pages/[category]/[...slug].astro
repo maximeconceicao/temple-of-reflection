@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
 import Layout from "@/layouts/Layout.astro";
 import type { GardenEntry } from "@/lib/types";
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import { Breadcrumbs } from "@/components/Breadcrumbs.tsx";
 import { buildUrl } from "@/lib/utils";
 
 export async function getStaticPaths() {
@@ -38,12 +38,10 @@ const breadcrumbItems = [
   { label: "Home", href: buildUrl() },
   { label: categoryMeta[category].label, href: buildUrl(category) },
 ];
-// Construit les sous-chemins et labels à partir du slug
-let accumulatedPath = buildUrl(category);
-slug.split("/").forEach((segment) => {
-  accumulatedPath += `/${segment}`;
-  const label = segment.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-  breadcrumbItems.push({ label, href: accumulatedPath });
+const slugSegments = slug.split("/");
+slugSegments.forEach((segment, i) => {
+  const label = segment.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  breadcrumbItems.push({ label, href: buildUrl(category, ...slugSegments.slice(0, i + 1)) });
 });
 ---
 
@@ -57,7 +55,7 @@ slug.split("/").forEach((segment) => {
       <h2 class="text-3xl font-medium">{entry.data.title}</h2>
     </section>
     <section class="mt-4 mb-8">
-      <Breadcrumbs items={breadcrumbItems} />
+      <Breadcrumbs client:load items={breadcrumbItems} />
     </section>
     <div class="hero-image mt-7">
       {

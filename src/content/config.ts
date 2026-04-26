@@ -4,7 +4,7 @@ import { defineCollection, z } from "astro:content";
 const schema = z.object({
   title: z.string(),
   description: z.string(),
-  category: z.nativeEnum(GardenCategory), // adapte cette liste
+  category: z.nativeEnum(GardenCategory),
   emoji: z.string().optional(),
   type: z.nativeEnum(GardenType),
   tags: z.array(z.string()).optional(),

@@ -39,7 +39,7 @@ const entriesSorted = [...entries].sort((a, b) => {
           <EntryDate formattedDate={formattedDate} />
           <a
             href={buildUrl(category, entry.slug)}
-            class="hover:underline text-md"
+            class="hover:underline text-base"
             style={{ color: `var(--${categoryMeta[category].color})` }}
           >
             {entry.data.title}
