@@ -1,7 +1,7 @@
 ---
 import "@/styles/global.css";
-// Component Imports
 import Layout from "@/layouts/Layout.astro";
+import { buildUrl } from "@/lib/utils";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -14,12 +14,12 @@ import Layout from "@/layouts/Layout.astro";
         <span class="text-primary">Temple</span> Of Reflection
       </h2>
       <img
-        src={`${import.meta.env.BASE_URL}/images/temple-light.png`}
+        src={buildUrl("images/temple-light.png")}
         alt="Temple en journée"
         class="block dark:hidden w-full h-auto rounded-md my-7"
       />
       <img
-        src={`${import.meta.env.BASE_URL}/images/temple-dark.png`}
+        src={buildUrl("images/temple-dark.png")}
         alt="Temple de nuit"
         class="hidden dark:block w-full h-auto rounded-md my-7"
       />

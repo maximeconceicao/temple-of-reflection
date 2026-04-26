@@ -11,6 +11,7 @@ import Fuse from "fuse.js";
 import { useEffect, useMemo, useState } from "react";
 import { categoryMeta } from "@/lib/categories";
 import type { GardenEntry } from "@/lib/types";
+import { buildUrl } from "@/lib/utils";
 
 export function SearchCommandDialog({
   entries,
@@ -54,9 +55,7 @@ export function SearchCommandDialog({
               key={note.slug}
               onSelect={() => {
                 setOpen(false);
-                window.location.href = `${import.meta.env.BASE_URL}${
-                  note.data.category
-                }/${note.slug}`;
+                window.location.href = buildUrl(note.data.category, note.slug);
               }}
             >
               <span>{note.data.title}</span>

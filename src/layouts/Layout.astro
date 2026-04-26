@@ -89,11 +89,9 @@ categories.sort((a, b) => b.count - a.count);
 
     <title>{title}</title>
   </head>
-  <body>
-    <main class="flex min-h-screen">
-      <AppShell entries={publishedEntries} categories={categories}>
-        <slot />
-      </AppShell>
-    </main>
+  <body class="flex min-h-screen">
+    <AppShell entries={publishedEntries} categories={categories}>
+      <slot />
+    </AppShell>
   </body>
 </html>

@@ -1,9 +1,9 @@
 ---
-import { Breadcrumbs } from "@/components/Breadcrumbs";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import EntryList from "@/components/EntryList.astro";
 import Layout from "@/layouts/Layout.astro";
 import { allCategories, categoryMeta, GardenCategory } from "@/lib/categories";
-import { isMainNote } from "@/lib/utils";
+import { buildUrl, isMainNote } from "@/lib/utils";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -24,52 +24,29 @@ const publishedEntries = entries
   .filter((entry) => !entry.data.draft)
   .filter((entry) => isMainNote(entry.slug));
 
-// const groupedByType = entries.reduce(
-//   (acc: Record<string, typeof entries>, entry) => {
-//     const type = entry.data.type;
-//     if (!acc[type]) acc[type] = [];
-//     acc[type].push(entry);
-//     return acc;
-//   },
-//   {}
-// );
-
-const entriesSorted = publishedEntries.sort((a, b) => {
-  const dateA = new Date(a.data.pubDate);
-  const dateB = new Date(b.data.pubDate);
-  return dateB.getTime() - dateA.getTime();
-});
-
 const Icon = categoryMeta[category].icon;
 ---
 
 <Layout title={categoryMeta[category].label}>
-  {
-    (
-      <main>
-        <section class="flex flex-row items-center gap-2">
-          <Icon
-            className="w-10 h-10"
-            style={{ stroke: `var(--${categoryMeta[category].color})` }}
-          />
-          <h2 class="text-4xl">{categoryMeta[category].label}</h2>
-        </section>
+  <section class="flex flex-row items-center gap-2">
+    <Icon
+      className="w-10 h-10"
+      style={{ stroke: `var(--${categoryMeta[category].color})` }}
+    />
+    <h2 class="text-4xl">{categoryMeta[category].label}</h2>
+  </section>
 
-        <section class="mt-4 mb-8">
-          <Breadcrumbs
-            client:load
-            items={[
-              { label: "Home", href: import.meta.env.BASE_URL },
-              {
-                label: categoryMeta[category].label,
-                href: `${import.meta.env.BASE_URL}${category}`,
-              },
-            ]}
-          />
-        </section>
+  <section class="mt-4 mb-8">
+    <Breadcrumbs
+      items={[
+        { label: "Home", href: buildUrl() },
+        {
+          label: categoryMeta[category].label,
+          href: buildUrl(category),
+        },
+      ]}
+    />
+  </section>
 
-        <EntryList category={category} entries={publishedEntries} />
-      </main>
-    )
-  }
+  <EntryList category={category} entries={publishedEntries} />
 </Layout>

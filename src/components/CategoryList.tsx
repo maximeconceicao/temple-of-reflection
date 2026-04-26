@@ -1,9 +1,9 @@
 import {
   categoryMeta,
-  GardenCategory,
   type CategoryCount,
 } from "@/lib/categories";
 import { Sprout } from "lucide-react";
+import { buildUrl } from "@/lib/utils";
 
 type CategoryListProps = {
   categories: CategoryCount[];
@@ -24,7 +24,7 @@ export function CategoryList({
         return (
           <li key={category}>
             <a
-              href={`${import.meta.env.BASE_URL}${category}`}
+              href={buildUrl(category)}
               className="center inline-flex items-center gap-2 py-1 text-sm"
             >
               <Icon className="w-4 h-4" style={{ stroke: `var(--${color})` }} />
