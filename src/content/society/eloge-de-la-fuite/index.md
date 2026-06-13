@@ -5,7 +5,7 @@ type: "book"
 categories:
   - essai
   - sciences humaines
-pubDate: 2023-11-20
+pubDate: 2026-06-13
 description: ""
 heroImageLight: "/images/society/ecotopia-light.png"
 heroImageDark: "/images/society/ecotopia-dark.png"
@@ -36,7 +36,9 @@ _Éloge de la fuite_ est un essai de Henri Laborit publié en 1976. Il analyse p
 
 ---
 
-## 🔑 Points Clés
+## 📖 Chapitres
+
+### [1 - Autoportrait](/temple-of-reflection/society/eloge-de-la-fuite/1-autoportrait)
 
 ---
 
