@@ -38,7 +38,9 @@ _Éloge de la fuite_ est un essai de Henri Laborit publié en 1976. Il analyse p
 
 ## 📖 Chapitres
 
-### [1 - Autoportrait](/temple-of-reflection/society/eloge-de-la-fuite/1-autoportrait)
+### [🪞 Autoportrait](/temple-of-reflection/society/eloge-de-la-fuite/1-autoportrait)
+
+### [❤️ L'Amour](/temple-of-reflection/society/eloge-de-la-fuite/2-amour)
 
 ---
 
