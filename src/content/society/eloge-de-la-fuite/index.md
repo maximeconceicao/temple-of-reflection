@@ -42,6 +42,8 @@ _Éloge de la fuite_ est un essai de Henri Laborit publié en 1976. Il analyse p
 
 ### [❤️ L'Amour](/temple-of-reflection/society/eloge-de-la-fuite/2-amour)
 
+### [💡 Une idée de l'Homme](/temple-of-reflection/society/eloge-de-la-fuite/2-amour)
+
 ---
 
 
