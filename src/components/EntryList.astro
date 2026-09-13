@@ -38,7 +38,7 @@ const entriesSorted = [...entries].sort((a, b) => {
         <div class="hidden sm:grid sm:grid-cols-[1fr_4fr_1fr] py-2 border-b gap-1 sm:gap-0">
           <EntryDate formattedDate={formattedDate} />
           <a
-            href={buildUrl(category, entry.slug)}
+            href={buildUrl(category, entry.id)}
             class="hover:underline text-base"
             style={{ color: `var(--${categoryMeta[category].color})` }}
           >
@@ -50,7 +50,7 @@ const entriesSorted = [...entries].sort((a, b) => {
           <EntryDate formattedDate={formattedDate} />
           <div class="flex flex-row justify-between">
           <a
-            href={buildUrl(category, entry.slug)}
+            href={buildUrl(category, entry.id)}
             class="hover:underline text-lg"
             style={{ color: `var(--${categoryMeta[category].color})` }}
           >

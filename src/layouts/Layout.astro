@@ -16,7 +16,7 @@ const publishedEntries = allEntriesArrays
 const categories = Object.values(GardenCategory).map((category) => ({
   category,
   count: publishedEntries.filter(
-    (entry) => entry.data.category === category && isMainNote(entry.slug)
+    (entry) => entry.data.category === category && isMainNote(entry.id)
   ).length,
 }));
 

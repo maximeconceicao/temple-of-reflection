@@ -52,10 +52,10 @@ export function SearchCommandDialog({
         <CommandGroup heading={query ? "Résultat(s)" : "Dernières notes"}>
           {results.map((note) => (
             <CommandItem
-              key={note.slug}
+              key={note.id}
               onSelect={() => {
                 setOpen(false);
-                window.location.href = buildUrl(note.data.category, note.slug);
+                window.location.href = buildUrl(note.data.category, note.id);
               }}
             >
               <span>{note.data.title}</span>
