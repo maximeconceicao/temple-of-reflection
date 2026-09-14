@@ -1,13 +1,14 @@
 import { allCategories, GardenCategory, GardenType } from "@/lib/categories";
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 
 const schema = z.object({
   title: z.string(),
   description: z.string(),
-  category: z.nativeEnum(GardenCategory),
+  category: z.enum(GardenCategory),
   emoji: z.string().optional(),
-  type: z.nativeEnum(GardenType),
+  type: z.enum(GardenType),
   tags: z.array(z.string()).optional(),
   pubDate: z.coerce.date(),
   updatedDate: z.coerce.date().optional(),
