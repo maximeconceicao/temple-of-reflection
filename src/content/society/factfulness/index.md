@@ -65,7 +65,9 @@ _Factfulness_ part d'un constat troublant : interrogés sur l'état du monde (pa
 
 ### 1. 🪜 L'instinct du fossé
 **Le piège** : diviser le monde en deux camps opposés séparés par un gouffre (riches/pauvres, Nord/Sud).
+
 **La réalité** : la majorité se trouve au milieu ; les courbes se superposent.
+
 **La règle** → _Cherchez la majorité._ Méfiez-vous des moyennes et des comparaisons entre extrêmes.
 
 > _Rappelez-vous, regarder d'en haut déforme la vue. Tous les autres édifices ont l'air également bas, mais ce n'est pas le cas_
@@ -74,7 +76,9 @@ _Factfulness_ part d'un constat troublant : interrogés sur l'état du monde (pa
 
 ### 2. 📉 L'instinct de négativité
 **Le piège** : croire que « le monde va de plus en plus mal ».
+
 **La réalité** : nous recevons surtout des nouvelles négatives ; le passé est idéalisé, le progrès est silencieux.
+
 **La règle** → _Attendez-vous aux mauvaises nouvelles._ Deux choses peuvent être vraies : **ça va mal ET ça va mieux**.
 
 > _Voyez le monde comme un bébé prématuré en incubateur : son état est critique, et pourtant il s'améliore._
@@ -83,7 +87,9 @@ _Factfulness_ part d'un constat troublant : interrogés sur l'état du monde (pa
 
 ### 3. 📈 L'instinct de la ligne droite
 **Le piège** : supposer qu'une tendance va continuer tout droit (ex. la population qui « explose » sans fin).
+
 **La réalité** : les courbes prennent des formes variées (S, bosse, toboggan). La croissance démographique ralentit déjà ; stabilisation attendue vers 10-12 Md.
+
 **La règle** → _Ne supposez pas que les lignes sont droites._
 
 > _Sauver les enfants pauvres ne gonfle pas la population : c'est **retarder** la fin de l'extrême pauvreté qui la fait grimper._
@@ -92,7 +98,9 @@ _Factfulness_ part d'un constat troublant : interrogés sur l'état du monde (pa
 
 ### 4. 😱 L'instinct de la peur
 **Le piège** : confondre ce qui fait peur avec ce qui est dangereux (terrorisme, crashs, catastrophes, nucléaire).
+
 **La réalité** : ces causes représentent chacune **moins de 1 %** des décès ; le monde n'a jamais été aussi sûr.
+
 **La règle** → _Calculez le risque._ **Risque = danger × exposition.** Calmez-vous avant de décider.
 
 > _Je ne voyais pas ce que je voulais voir. Je voyais ce que j'avais peur de voir. La pensée critique est toujours chose difficile, mais elle devient presque impossible quand nous sommes effrayés._
@@ -101,7 +109,9 @@ _Factfulness_ part d'un constat troublant : interrogés sur l'état du monde (pa
 
 ### 5. 🔎 L'instinct de la taille
 **Le piège** : un chiffre isolé paraît toujours impressionnant.
+
 **La réalité** : seul, un nombre ne veut rien dire.
+
 **La règle** → _Comparez et divisez._ Appliquez la **loi des 80/20** ; privilégiez les taux **par personne**.
 
 > _Nous avons tendance à penser que sur une liste, tous les items sont d'une importance égale. Mais en général, une poignée d'entre eux sont plus importants que tous les autres réunis. Qu'il s'agisse de causes de décès ou d'items budgétaires, je commence par me concentrer simplement sur ceux qui correspondent à 80 % du total. Avant d'étudier les plus petits, je me demande : où sont les 80 % ? Pourquoi sont-ils si importants ? Quelles sont les implications ?_
@@ -112,21 +122,27 @@ _Factfulness_ part d'un constat troublant : interrogés sur l'état du monde (pa
 
 ### 6. 🧩 L'instinct de généralisation
 **Le piège** : utiliser une catégorie comme explication, enfermer des groupes entiers dans un cliché.
+
 **La réalité** : les différences au sein d'un groupe sont souvent plus grandes qu'entre les groupes.
+
 **La règle** → _Interrogez vos catégories._ Méfiez-vous des étiquettes qui gomment les différences au sein d'un groupe. Et face à un comportement qui semble absurde, ne concluez pas que les gens sont bêtes : cherchez sa logique cachée, demandez-vous « en quoi est-ce une solution astucieuse de leur point de vue ? » (ces mères qui posaient leur nouveau-né sur un toit brûlant improvisaient en réalité une couveuse).
 
 ---
 
 ### 7. 🪨 L'instinct de la destinée
 **Le piège** : croire que des traits innés fixent à jamais le destin d'un peuple, d'une culture ou d'une religion. Ça a toujours été comme ça et ça ne changera jamais.
+
 **La réalité** : les cultures changent — lentement, mais sûrement. Les valeurs « traditionnelles » qu'on prête aujourd'hui à d'autres sociétés (place des femmes, sexualité, contraception) régnaient encore en Suède il y a 60 ans.
+
 **La règle** → _Un changement lent reste un changement._ Ne confondez pas « lent » et « immobile » ; parlez avec vos grands-parents.
 
 ---
 
 ### 8. 🔨 L'instinct de la perspective unique
 **Le piège** : croire qu'une seule cause (ou une seule solution) explique tout.
+
 **La réalité** : _« Si votre seul outil est un marteau, tout problème ressemble à un clou. »_ Même la démocratie n'est pas la condition unique du progrès.
+
 **La règle** → _Munissez-vous d'une boîte à outils, pas d'un marteau._ Mettez vos idées à l'épreuve ; accueillez la complexité. Il vaut mieux étudier les problèmes en partant de plusieurs angles si on veut en avoir une vision plus juste, et trouver des solutions concrètes.
 
 > _Le monde ne peut être compris sans les chiffres — ni **uniquement** avec les chiffres._
@@ -137,7 +153,9 @@ _Factfulness_ part d'un constat troublant : interrogés sur l'état du monde (pa
 
 ### 9. 👉 L'instinct du blâme
 **Le piège** : chercher un coupable clair et simple quand quelque chose tourne mal et exagérer l'importance des individus ou de certains groupes.
+
 **La réalité** : désigner un méchant stoppe la réflexion ; les causes sont presque toujours **systémiques**.
+
 **La règle** → _Cherchez des causes, pas des méchants ; des systèmes, pas des héros._
 
 > _Ce sont les gens, pas les dirigeants, qui construisent une société. Merci l'industrialisation : « le linge est parti, et les livres sont arrivés. »_
@@ -148,7 +166,9 @@ _Factfulness_ part d'un constat troublant : interrogés sur l'état du monde (pa
 
 ### 10. ⏰ L'instinct de l'urgence
 **Le piège** : « maintenant ou jamais ! » — agir dans la panique, sans réfléchir.
+
 **La réalité** : une décision est rarement aussi urgente qu'elle le paraît ; l'urgence amplifie tous les autres instincts.
+
 **La règle** → _Respirez. Procédez par petits pas._ Exigez des données fiables **et** pertinentes, méfiez-vous des prévisions catastrophistes.
 
 > _Quand on me dit qu'il faut agir **maintenant**, cela me fait hésiter : le plus souvent, on cherche à m'empêcher de penser clairement._
